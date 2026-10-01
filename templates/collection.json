@@ -1,0 +1,349 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "banner_layout": "overlay",
+        "banner_height_mobile": "default",
+        "banner_height": "default",
+        "stacked_img_ratio": "landscape_21x9",
+        "banner_width": "none",
+        "txt_alignment": "center",
+        "text_width": "medium",
+        "title_size": "h1",
+        "title_margin": 10,
+        "description_enable": true,
+        "description_size": "text-body",
+        "text_indent": "none",
+        "description_padding": 40,
+        "cards_img_ratio": "portrait",
+        "cards_img_position": "left",
+        "image_padding": "page_margin",
+        "grid_spacing": "none",
+        "txt_col": "#ffffff",
+        "bg_col": "#000000",
+        "top_padding": 0,
+        "bottom_padding": 0
+      }
+    },
+    "navigation": {
+      "type": "main-collection-sub-navigation",
+      "disabled": true,
+      "settings": {
+        "menu": "",
+        "alignment": "center",
+        "menu_style": "list",
+        "image_ratio": "landscape",
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_pQPe6J": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_74tCLQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "SHOP JAX",
+            "heading_size": "h1",
+            "alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 20
+          }
+        },
+        "text_UhrQWV": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Explore the&nbsp;full&nbsp;JAX&nbsp;lineup, from starter&nbsp;kits to refill pods and accessories&nbsp;designed for a&nbsp;better way to drink.</p>",
+            "text_size": "text-std",
+            "alignment": "center",
+            "text_indent": "noindent",
+            "padding_top": 0,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_74tCLQ",
+        "text_UhrQWV"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "content_width": "page-width",
+        "content_horizontal_position": "center",
+        "bg_image_darken": 0,
+        "bg_image_blur": 0,
+        "text_color": "fg-04",
+        "bg_color": "bg-03",
+        "padding_top": 80,
+        "padding_bottom": 40,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "blocks_b8EUg8": {
+      "type": "_blocks",
+      "blocks": {
+        "featured_product_new_MTLarB": {
+          "type": "featured-product-new",
+          "settings": {
+            "product": "jax-set",
+            "desktop_width_percent": 100,
+            "show_header": false,
+            "section_heading": "Featured product",
+            "section_subheading": "<p>Discover a new favorite.</p>",
+            "header_link_label": "Discover more",
+            "header_link": "",
+            "header_alignment": "left",
+            "header_top": 20,
+            "header_bottom": 25,
+            "badge_label": "SPECIAL OFFER",
+            "badge_link": "",
+            "badge_background": "#8E9569",
+            "badge_text_color": "#FFFFFF",
+            "custom_title": "",
+            "custom_description": "<p>The JAX Set is the best way to start Jaxxing. Our introductory offer includes <strong>1 Stream-X case</strong> and <strong>1 Elixir Pod</strong> for just <strong>$30.</strong> Enjoy this special launch price — a <strong>$50 value</strong> — and start Jaxxing.&nbsp;</p><p><a href=\"/products/jax-set\" title=\"The JAX Set\">LEARN MORE</a></p>",
+            "learn_more_label": "",
+            "learn_more_url": "",
+            "content_alignment": "left",
+            "button_label": "ADD TO BAG",
+            "button_alignment": "left",
+            "button_color": "#8E9569",
+            "button_text_color": "#FFFFFF",
+            "button_hover_color": "#393939",
+            "button_hover_text_color": "#FFFFFF",
+            "callout_alignment": "flex-start",
+            "icon_size": 24,
+            "icon_color": "#393939",
+            "callout_heading_color": "#393939",
+            "callout_text_color": "#393939",
+            "callout_1_image": "shopify://shop_images/free-ship_2c75af4b-8dac-40e7-a3ea-e3a1bd9655ac.png",
+            "callout_1_heading": "FREE SHIPPING",
+            "callout_1_text": "Ships to 44 states",
+            "callout_1_url": "shopify://pages/faq",
+            "callout_1_heading_link": true,
+            "callout_1_whole_link": false,
+            "callout_2_image": "shopify://shop_images/USA-color.png",
+            "callout_2_heading": "FARM TO POD",
+            "callout_2_text": "Made in USA",
+            "callout_2_url": "",
+            "callout_2_heading_link": false,
+            "callout_2_whole_link": false,
+            "callout_3_image": "shopify://shop_images/case-color.png",
+            "callout_3_heading": "FREE CASE",
+            "callout_3_text": "Stream-X case on us",
+            "callout_3_url": "",
+            "callout_3_heading_link": false,
+            "callout_3_whole_link": false,
+            "image_scale": 90,
+            "image_alignment": "center",
+            "mobile_order": "image-first",
+            "frame_padding": 12,
+            "content_padding": 40,
+            "column_gap": 0,
+            "frame_color": "#8E9569",
+            "panel_color": "#FFFFFF"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "featured_product_new_MTLarB"
+      ],
+      "name": "Featured product luxe",
+      "settings": {}
+    },
+    "blocks_FyqFym": {
+      "type": "_blocks",
+      "blocks": {
+        "featured_product_iFmqt7": {
+          "type": "featured-product",
+          "settings": {
+            "product": "jax-set",
+            "section_heading": "",
+            "section_subheading": "",
+            "show_title": true,
+            "show_price": true,
+            "show_description": true,
+            "custom_description": "<p>The JAX Set is the best way to start Jaxxing. Our introductory offer includes 1&nbsp;<strong>Stream-X&nbsp;</strong>case and an&nbsp;<strong>Elixir Pod</strong>&nbsp;all for just<strong>&nbsp;$30.&nbsp;</strong></p>",
+            "show_learn_more": true,
+            "learn_label": "LEARN MORE",
+            "show_variants": true,
+            "show_quantity": false,
+            "show_button": true,
+            "button_label": "ADD TO BAG",
+            "desktop_width_percent": 100,
+            "card_width": 600,
+            "image_size": 100,
+            "image_ratio": "1 / 1",
+            "image_fit": "contain",
+            "section_bg": "#8e9569",
+            "card_bg": "#ffffff",
+            "text_color": "#393939",
+            "button_bg": "#8e9569",
+            "button_text": "#ffffff",
+            "border_color": "#ffffff",
+            "border_radius": 0,
+            "section_padding": 30,
+            "card_padding": 10,
+            "element_spacing": 12,
+            "show_benefits": true,
+            "icons_per_row": "3",
+            "mobile_icon_layout": "stack",
+            "icon_alignment": "center",
+            "icon_text_alignment": "center",
+            "icon_gap": 16,
+            "icon_top_spacing": 20,
+            "icon_size": 64,
+            "benefit_heading_color": "#393939",
+            "benefit_text_color": "#393939",
+            "benefit_1_image": "shopify://shop_images/free-ship-color.png",
+            "benefit_1_heading": "FREE SHIPPING",
+            "benefit_1_text": "Ships to 44 States",
+            "benefit_1_link": "",
+            "benefit_2_image": "shopify://shop_images/USA-color.png",
+            "benefit_2_heading": "FARM TO POD",
+            "benefit_2_text": "Made in the USA",
+            "benefit_2_link": "",
+            "benefit_3_image": "shopify://shop_images/case-color.png",
+            "benefit_3_heading": "FREE CASE",
+            "benefit_3_text": "Free case on us",
+            "benefit_3_link": "",
+            "benefit_4_heading": "",
+            "benefit_4_text": "",
+            "benefit_4_link": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "featured_product_iFmqt7"
+      ],
+      "disabled": true,
+      "name": "Featured product card",
+      "settings": {}
+    },
+    "blocks_jyqBwm": {
+      "type": "_blocks",
+      "blocks": {
+        "featured_collection_eznCTG": {
+          "type": "featured-collection",
+          "settings": {
+            "collection": "inventory",
+            "heading": "",
+            "show_heading": false,
+            "products_to_show": 3,
+            "desktop_width_percent": 100,
+            "max_section_width": 1200,
+            "columns_desktop": "3",
+            "columns_mobile": "1",
+            "mobile_carousel": false,
+            "padding_desktop": 40,
+            "padding_mobile": 20,
+            "side_padding": 20,
+            "gap": 20,
+            "card_padding": 16,
+            "card_radius": 0,
+            "show_title": true,
+            "show_price": true,
+            "show_price_description": true,
+            "show_description": true,
+            "show_learn_more": true,
+            "show_variants": true,
+            "show_add_button": true,
+            "learn_label": "LEARN MORE",
+            "add_label": "ADD TO BAG",
+            "success_label": "",
+            "description_1": "<p><strong>Get More, Save More.</strong><em><strong>&nbsp;</strong></em>Stock up on JAX Refill Pods and save as you go.</p>",
+            "description_2": "<p>Get a replacement or more JAX Stream-X cases.&nbsp;<em>Coming soon</em>:&nbsp;<em>get additional colors, materials, sizes and even more fun ways to collect & personalize your JAX, too!&nbsp;</em></p>",
+            "description_3": "<p>Give the gift of JAX. Each premium box comes with a Stream-X case and 2 Elixir Pods. It’s the perfect way to share the joy of JAX with someone you love.&nbsp;</p>",
+            "description_4": "",
+            "description_5": "",
+            "description_6": "",
+            "description_7": "",
+            "description_8": "",
+            "description_9": "",
+            "description_10": "",
+            "description_11": "",
+            "description_12": "",
+            "image_ratio": "1 / 1",
+            "image_fit": "contain",
+            "product_title_size": 21,
+            "price_size": 18,
+            "text_size": 16,
+            "variant_size": 40,
+            "variant_gap": 8,
+            "variant_radius": 0,
+            "section_color": "#8e9569",
+            "card_color": "#ffffff",
+            "border_color": "#ffffff",
+            "title_color": "#393939",
+            "price_color": "#393939",
+            "text_color": "#393939",
+            "variant_bg": "#ffffff",
+            "variant_text": "#393939",
+            "variant_border": "#777777",
+            "variant_selected_bg": "#393939",
+            "variant_selected_text": "#ffffff",
+            "button_color": "#8e9569",
+            "button_text_color": "#ffffff",
+            "button_radius": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "featured_collection_eznCTG"
+      ],
+      "name": "Featured collection",
+      "settings": {}
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "disabled": true,
+      "settings": {
+        "products_per_page": 16,
+        "section_margins": "page-width",
+        "grid_spacing_horizontal": "normal",
+        "grid_spacing_vertical": "normal",
+        "columns_mobile": "2",
+        "columns_tablet": 3,
+        "columns_desktop": 4,
+        "enable_creative_layouts": false,
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "card_image_display": "second_image_hover",
+        "pagination_color_scheme": "body",
+        "show_price": true,
+        "show_vendor": false,
+        "show_swatches": true,
+        "show_color_count": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "padding_top": 60,
+        "padding_bottom": 80
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "navigation",
+    "rich_text_pQPe6J",
+    "blocks_b8EUg8",
+    "blocks_FyqFym",
+    "blocks_jyqBwm",
+    "product-grid"
+  ]
+}

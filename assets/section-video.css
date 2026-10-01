@@ -1,0 +1,234 @@
+.align-center .video-player-sh {
+  margin: 0 auto;
+}
+
+.align-right .video-player-sh {
+  margin-left: auto;
+}
+
+.video-player-sh {
+  position: relative;
+  height: calc(100vw * 0.56);
+}
+
+.page-width .player-ratio-16x9 {
+  height: calc((100vw - (2 * var(--page-margin-mobile))) * 0.56);
+}
+
+.player-ratio-4x3 {
+  height: calc(100vw * 0.75);
+}
+
+.page-width .player-ratio-4x3 {
+  height: calc((100vw - (2 * var(--page-margin-mobile))) * 0.75);
+}
+
+.player-ratio-21x9 {
+  height: calc(100vw * 0.43);
+}
+
+.page-width .player-ratio-21x9 {
+  height: calc((100vw - (2 * var(--page-margin-mobile))) * 0.43);
+}
+
+.player-ratio-1x1 {
+  height: calc(100vw * 1);
+}
+
+.page-width .player-ratio-1x1 {
+  height: calc((100vw - (2 * var(--page-margin-mobile))) * 1);
+}
+
+.player-ratio-9x16 {
+  height: calc(100vw * 1.78);
+}
+
+.page-width .player-ratio-9x16 {
+  height: calc((100vw - (2 * var(--page-margin-mobile))) * 1.78);
+}
+
+.player-ratio-4x6 {
+  height: calc(100vw * 1.5);
+}
+
+.page-width .player-ratio-4x6 {
+  height: calc((100vw - (2 * var(--page-margin-mobile))) * 1.5);
+}
+
+.player-ratio-4x5 {
+  height: calc(100vw * 1.25);
+}
+
+.page-width .player-ratio-4x5 {
+  height: calc((100vw - (2 * var(--page-margin-mobile))) * 1.25);
+}
+
+@media only screen and (min-width: 1025px) {
+  .page-width .player-ratio-4x3 {
+    height: calc((100vw - (2 * var(--page-margin-desktop))) * 0.75);
+  }
+  .page-width .player-ratio-16x9 {
+    height: calc((100vw - (2 * var(--page-margin-desktop))) * 0.56);
+  }
+  .page-width .player-ratio-21x9 {
+    height: calc((100vw - (2 * var(--page-margin-desktop))) * 0.43);
+  }
+  .page-width .player-ratio-1x1 {
+    height: calc((100vw - (2 * var(--page-margin-desktop))) * 1);
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .player-ratio-4x5, .page-width .player-ratio-4x5 {
+    width: 500px;
+    height: 625px;
+  }
+  .player-ratio-4x6, .page-width .player-ratio-4x6 {
+    width: 400px;
+    height: 600px;
+  }
+  .player-ratio-9x16, .page-width .player-ratio-9x16 {
+    width: 360px;
+    height: 640px;
+  }  
+}
+
+@media only screen and (min-width: 750px) and (min-height: 900px) {
+  .player-ratio-4x5, .page-width .player-ratio-4x5 {
+    width: 560px;
+    height: 700px;
+  }
+  .player-ratio-4x6, .page-width .player-ratio-4x6 {
+    width: 480px;
+    height: 720px;
+  }
+  .player-ratio-9x16, .page-width .player-ratio-9x16 {
+    width: 450px;
+    height: 800px;
+  }  
+}
+
+
+.video-player-sh video, .video-player-sh img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--media-radius);
+}
+
+.video-poster-only img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--media-radius);
+}
+
+.fullscreen video, .fullscreen img {
+  border-radius: 0;
+}
+
+.page-width .video-player-sh--poster img {
+  border-radius: var(--media-radius);
+}
+
+.section-emb-video {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media only screen and (min-width: 1025px) {
+  .video-emb-section .section-header {
+    padding: 0 40px;
+  }
+}
+
+.player-width-full {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+.video-wrapper {
+	margin: 0 auto;
+  text-align: center;
+  position: relative;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.video-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-emb-section .image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--media-radius);
+}
+
+.video-emb-section .fullscreen .image-container img {
+  border-radius: 0;
+}
+
+.video-responsive {
+  width: 100%;
+  position: relative;
+  height: 54vw;
+  border: 0;
+}
+
+.responsive-video-wrapper {
+  overflow: hidden;
+  height: 56vw;
+}
+
+.responsive-video-wrapper .image-container {
+  height: 100%;
+  width: 100%;
+}
+
+.responsive-video-wrapper .image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--media-radius);
+}
+
+.video-responsive iframe {
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+  border: 0;
+}
+
+.video-responsive iframe img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.video-responsive iframe * {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.video-responsive iframe body {
+  height: 100%;
+}
+
+.responsive-video-wrapper {
+  width: 100%;
+  height: 54vw;
+}
+.responsive-video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+}

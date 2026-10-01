@@ -1,0 +1,546 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "breadcrumb_Ui8wgw": {
+          "type": "breadcrumb",
+          "disabled": true,
+          "settings": {
+            "text_case": "uppercase",
+            "divider_style": "slash",
+            "homepage_link": false
+          }
+        },
+        "tags_qFz8mT": {
+          "type": "tags",
+          "settings": {
+            "badge_position": "normal",
+            "badge_media_alignment": "right",
+            "badge_font_size": 11
+          }
+        },
+        "vendor_brA3d9": {
+          "type": "vendor",
+          "disabled": true,
+          "settings": {
+            "font_family": "body",
+            "link_to_collection": false
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": "h2",
+            "show_price": false,
+            "price_layout": "space-between",
+            "price_font_family": "body",
+            "price_font_style": "normal",
+            "price_size": "price--match-title",
+            "show_discounts": false,
+            "price_show_taxes": true,
+            "show_shoppay_banner": true
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "price_size": "price--large",
+            "price_font_family": "body",
+            "price_font_style": "normal",
+            "show_discounts": true,
+            "price_show_taxes": true,
+            "price_taxes_position": "below",
+            "show_shoppay_banner": false
+          }
+        },
+        "inventory_zeVG83": {
+          "type": "inventory",
+          "disabled": true,
+          "settings": {
+            "inventory_display": "status",
+            "inventory_threshold": 10,
+            "inventory-color-coded": false,
+            "hide_if_in_stock": false
+          }
+        },
+        "d397b53e-d0be-4717-805f-6ee8a8d247bf": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_title": "",
+            "label_alignment": "inherit",
+            "font_family": "accent",
+            "picker_type": "button",
+            "pill_alignment": "center",
+            "pill_min_width": 54,
+            "pill_layout": "auto",
+            "pill_selected_state": "outline",
+            "minimal_highlight_style": "underline",
+            "pill_threshold": 20,
+            "pill_additional_options_display": "accordion",
+            "show_labels": true,
+            "show_puncuation": true,
+            "swatch_label_position": "inline",
+            "border_top": false,
+            "border_bottom": false,
+            "use_variant_images": false,
+            "thumbnail_variants_label": "Color",
+            "use_color_swatches": false,
+            "color_swatches_style": "square",
+            "color_swatch_size": "normal",
+            "visual_variants_array": "Colour, Color",
+            "color_swatches_array": "White - #f2f2f2\nBlack - #000000\nNavy - #233756\nRed - #912014\nDark Grey - #333333"
+          }
+        },
+        "099f936f-1f52-44f2-8d7b-0188fbd363d5": {
+          "type": "quantity_selector",
+          "settings": {
+            "show_label": true,
+            "selector_layout": "stacked",
+            "border_top": false,
+            "border_bottom": false
+          }
+        },
+        "icon_grid_dn8gRp": {
+          "type": "icon_grid",
+          "settings": {
+            "icon_alignment": "center",
+            "icon_layout": "stacked",
+            "icon_text_max_width": 120,
+            "icon_size_mobile": 36,
+            "icon_size_desktop": 36,
+            "grid_columns_mobile": 2,
+            "grid_columns_desktop": "auto",
+            "grid_spacing_mobile": 24,
+            "grid_spacing_desktop": 20,
+            "icon_one_image": "shopify://shop_images/free-ship_2c75af4b-8dac-40e7-a3ea-e3a1bd9655ac.png",
+            "icon_one_label": "Free Shipping",
+            "icon_two_image": "shopify://shop_images/USA-color.png",
+            "icon_two_label": "Farm to Pod.  Made in USA",
+            "icon_three_image": "shopify://shop_images/case-color.png",
+            "icon_three_label": "Free case on us",
+            "icon_four_label": "",
+            "icon_five_label": "",
+            "icon_six_label": ""
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "button_style": "solid",
+            "button_additional_padding_top": 0,
+            "button_additional_padding_bottom": 0,
+            "show_dynamic_checkout": false,
+            "show_payment_methods": false,
+            "show_pickup": true,
+            "pickup_alignment": "center",
+            "show_pickup_icon": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "display_type": "normal",
+            "description_drawer_link_style": "underline",
+            "accordion_open_default": true,
+            "show_border": true,
+            "text_indent": false
+          }
+        },
+        "collapsible_tab_xVtpDM": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Why You'll Love It",
+            "content": "<ul><li><strong>Fast-acting formula</strong> – Feel effects in as little as <strong>5–15 minutes</strong>.*</li><li><strong>Precision dosing</strong> – Each spray delivers <strong>1 mg of Delta-9 THC</strong>, giving you complete control over your experience.</li><li><strong>Flavorless & odorless</strong> – Enhances your drink without altering its taste or smell.</li><li><strong>Clean ingredients</strong> – 100% natural with <strong>zero calories, zero sugar, and zero carbs.</strong></li><li><strong>Made for every drink</strong> – Perfect for sparkling water, soda, mocktails, juice, coffee, tea, electrolytes, and more.</li><li><strong>Portable by design</strong> – The sleek brushed aluminum Stream X Case is pocket-sized, reusable, and built for life on the go.</li><li><strong>Travel-friendly</strong> – Each Elixir Pod contains just <strong>18 mL (less than 0.7 fl oz)</strong>, making it easy to pack and compliant with TSA liquid limits.</li></ul>",
+            "page": "",
+            "show_border": true
+          }
+        },
+        "5c65d55b-9f21-4d69-b50a-6219b616bb68": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Key Features",
+            "content": "<h3></h3><ul><li>Portable Delta-9 THC pod dispenser<br/></li><li>Compatible with all JAX Elixir & Elixir+ Pods<br/></li><li>Sleek anodized aluminum case<br/></li><li>Compact, discreet, and travel-friendly<br/></li><li>One-handed twist-up dispensing mechanism<br/></li><li>Lipstick-style design for easy dosing<br/></li><li>Add single or multiple shots per drink<br/></li><li>Custom nozzle and pump for clean, precise streams<br/></li><li>Leak-proof design prevents spills and accidental doses Holds a sealed, watertight glass pod<br/></li></ul><p></p><p></p>",
+            "page": "",
+            "show_border": true
+          }
+        },
+        "collapsible_tab_AwWDW7": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping",
+            "content": "<p>JAX currently ships to 44 states and is unavailable for delivery to Alaska, Hawaii, Idaho, Iowa, North Dakota, and Ohio.</p>",
+            "page": "",
+            "show_border": true
+          }
+        }
+      },
+      "block_order": [
+        "breadcrumb_Ui8wgw",
+        "tags_qFz8mT",
+        "vendor_brA3d9",
+        "title",
+        "price",
+        "inventory_zeVG83",
+        "d397b53e-d0be-4717-805f-6ee8a8d247bf",
+        "099f936f-1f52-44f2-8d7b-0188fbd363d5",
+        "icon_grid_dn8gRp",
+        "buy_buttons",
+        "description",
+        "collapsible_tab_xVtpDM",
+        "5c65d55b-9f21-4d69-b50a-6219b616bb68",
+        "collapsible_tab_AwWDW7"
+      ],
+      "custom_css": [
+        ".price__container {display: flex; align-items: baseline; flex-wrap: wrap; column-gap: 6px;}",
+        ".variant-price-description {display: inline-block;}"
+      ],
+      "settings": {
+        "section_desktop_layout": "image-left",
+        "enable_sticky_info": true,
+        "enable_sticky_buttons": false,
+        "sticky_buttons_padding": 10,
+        "sticky_buttons_padding_horizontal": 20,
+        "sticky_buttons_border": true,
+        "sticky_buttons_shadow": 0,
+        "enable_sticky_buttons_desktop": false,
+        "sticky_buttons_desktop_media": true,
+        "sticky_buttons_desktop_price": true,
+        "sticky_buttons_desktop_position": "bottom",
+        "sticky_buttons_desktop_margin": "auto",
+        "sticky_buttons_desktop_padding_vertical": 10,
+        "show_variant_image_only": false,
+        "media_bg_col": "#f0eadc",
+        "gallery_aspect_ratio": "square",
+        "gallery_media_scale": "scale-down",
+        "gallery_height_limit_desktop": false,
+        "media_section_width": "standard",
+        "product_section_width": "full-width",
+        "media_mobile_width": "page-width",
+        "media_width_offset": 0,
+        "gallery_grid_spacing": 0,
+        "mobile_media_nav": "thumbnails",
+        "mobile_media_nav_position": "below-media",
+        "gallery_layout": "slider",
+        "desktop_media_items_in_view": "1",
+        "desktop_media_nav": "thumbnails",
+        "desktop_media_thumbnail_size": "large",
+        "desktop_media_thumbnail_position": "bottom",
+        "desktop_media_thumbnail_placement": "adjacent",
+        "thumbnail_border_opacity": 20,
+        "thumbnail_border_opacity_active": 80,
+        "arrow_style": "outline",
+        "desktop_arrow_position": "middle",
+        "desktop_arrow_vis": "visible",
+        "balance_grid": true,
+        "media_video_autoplay": true,
+        "media_video_play_button_style": "outline",
+        "zoom_enable": true,
+        "gallery_mega_zoom": "normal",
+        "zoom_enable_in_out": false,
+        "zoom_thumbnail_position_mobile": "bottom",
+        "zoom_thumbnail_position_desktop": "left",
+        "zoom_thumbnail_background": false,
+        "zoom_thumbnail_border": false,
+        "zoom_fg_color": "fg-body",
+        "zoom_bg_color": "bg-body",
+        "info_txt_alignment": "left",
+        "text_section_position": "center",
+        "text_section_vertical_position": "top",
+        "text_section_max_width": 400,
+        "text_section_padding": 60,
+        "blocks_vertical_spacing": 20,
+        "description_split_keyword": "INFOBREAK",
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "padding_top": 0,
+        "padding_bottom": 30,
+        "vertical_border": false,
+        "bottom_border": false,
+        "border_width": "full",
+        "border_color": "dark"
+      }
+    },
+    "section_product_collection_links_Uc944h": {
+      "type": "section-product-collection-links",
+      "disabled": true,
+      "settings": {
+        "heading": "Browse more",
+        "heading_size": "h2",
+        "alignment": "center",
+        "list_layout": "vertical",
+        "link_style": "text",
+        "max_links": 4,
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top": 60,
+        "padding_bottom": 0,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "complementary-products": {
+      "type": "complementary-products",
+      "disabled": true,
+      "settings": {
+        "heading": "Pair it with",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "products_to_show": 6,
+        "arrow_style": "solid-inverted",
+        "card_image_display": "multi_images",
+        "pagination_color_scheme": "body",
+        "show_price": true,
+        "show_vendor": false,
+        "show_swatches": false,
+        "show_color_count": false,
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "section_feature_icons_EAt3CD": {
+      "type": "section-feature-icons",
+      "blocks": {
+        "image_ajinRF": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/insert_98fe9a96-646d-44c3-bfdf-65ca7db96c76.png",
+            "heading": "01. Insert Pod <br> into the case",
+            "description": ""
+          }
+        },
+        "image_4RmpG6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/twist_66e54bad-fc7d-485f-82c4-dc4d2115d9b6.png",
+            "heading": "02. Twist",
+            "description": ""
+          }
+        },
+        "image_FK9FUW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/vibe-1_5b1a8364-63e5-4596-820b-24bf4589531e.png",
+            "heading": "03. Stream",
+            "description": ""
+          }
+        },
+        "image_Bk4q4t": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/vibe-1_5d22ca2d-908a-4f24-8ce2-980e0c09e7f8.png",
+            "heading": "04. Vibe",
+            "description": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_ajinRF",
+        "image_4RmpG6",
+        "image_FK9FUW",
+        "image_Bk4q4t"
+      ],
+      "name": "t:sections.feature_icons.presets.name",
+      "settings": {
+        "section_label": "",
+        "heading": "How to JAX",
+        "subheading": "",
+        "heading_size": "h0",
+        "btn_enable": false,
+        "btn_txt": "",
+        "btn_link": "",
+        "btn_style": "solid",
+        "content_width": "page-width",
+        "content_alignment": "center",
+        "icon_size_mobile": 92,
+        "icon_size_tablet": 96,
+        "icon_size_desktop": 120,
+        "grid_columns_mobile": "2",
+        "grid_columns_tablet": "4",
+        "grid_columns_desktop": "4",
+        "icon_spacing_mobile": 40,
+        "icon_spacing_tablet": 80,
+        "icon_spacing_desktop": 80,
+        "icon_layout": "vertical",
+        "icon_vertical_alignment": "top",
+        "icon_title_size": "h3",
+        "icon_description_size": "normal",
+        "icon_to_title_spacing": 12,
+        "icon_title_spacing_bottom": 8,
+        "icon_text_max_width": 300,
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "btn_color_scheme": "default",
+        "top_padding": 20,
+        "bottom_padding": 40,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "GET JAX",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "products_to_show": 3,
+        "columns_tablet": 2,
+        "columns_desktop": 3,
+        "arrow_style": "solid-inverted",
+        "card_image_display": "none",
+        "pagination_color_scheme": "body",
+        "show_price": true,
+        "show_vendor": false,
+        "show_swatches": false,
+        "show_color_count": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "top_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "rich_text_nqYAiH": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Fk66Wq": {
+          "type": "heading",
+          "settings": {
+            "heading": "get jax",
+            "heading_size": "h1",
+            "alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 20
+          }
+        }
+      },
+      "block_order": [
+        "heading_Fk66Wq"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "content_width": "page-width",
+        "content_horizontal_position": "center",
+        "bg_image_darken": 0,
+        "bg_image_blur": 0,
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "blocks_6fV6YF": {
+      "type": "_blocks",
+      "blocks": {
+        "featured_collection_DCcmUL": {
+          "type": "featured-collection",
+          "settings": {
+            "collection": "inventory",
+            "heading": "",
+            "show_heading": false,
+            "products_to_show": 4,
+            "desktop_width_percent": 100,
+            "max_section_width": 1400,
+            "columns_desktop": "4",
+            "columns_mobile": "2",
+            "mobile_carousel": true,
+            "padding_desktop": 40,
+            "padding_mobile": 20,
+            "side_padding": 20,
+            "gap": 20,
+            "card_padding": 16,
+            "card_radius": 0,
+            "show_title": true,
+            "show_price": true,
+            "show_price_description": true,
+            "show_description": true,
+            "show_learn_more": true,
+            "show_variants": true,
+            "show_add_button": true,
+            "learn_label": "LEARN MORE",
+            "add_label": "ADD TO BAG",
+            "success_label": "",
+            "description_1": "<p><strong>Get More, Save More.</strong><em><strong>&nbsp;</strong></em>Stock up on JAX Refill Pods and save as you go.</p>",
+            "description_2": "<p>Get a replacement or more JAX Stream-X cases.&nbsp;<em>Coming soon</em>:&nbsp;<em>get additional colors, materials, sizes and even more fun ways to collect & personalize your JAX, too!&nbsp;</em></p>",
+            "description_3": "<p>Give the gift of JAX. Each premium box comes with a Stream-X case and 2 Elixir Pods. It’s the perfect way to share the joy of JAX with someone you love.&nbsp;</p>",
+            "description_4": "<p>The JAX Set is the best way to start Jaxxing. Our introductory offer includes 1&nbsp;<strong>Stream-X&nbsp;</strong>case and an&nbsp;<strong>Elixir Pod</strong>&nbsp;all for just<strong>&nbsp;$30.&nbsp;</strong></p>",
+            "description_5": "",
+            "description_6": "",
+            "description_7": "",
+            "description_8": "",
+            "description_9": "",
+            "description_10": "",
+            "description_11": "",
+            "description_12": "",
+            "image_ratio": "1 / 1",
+            "image_fit": "contain",
+            "product_title_size": 20,
+            "price_size": 18,
+            "text_size": 16,
+            "variant_size": 40,
+            "variant_gap": 8,
+            "variant_radius": 0,
+            "section_color": "#f0eadc",
+            "card_color": "#ffffff",
+            "border_color": "#f0eadc",
+            "title_color": "#393939",
+            "price_color": "#393939",
+            "text_color": "#393939",
+            "variant_bg": "#ffffff",
+            "variant_text": "#393939",
+            "variant_border": "#393939",
+            "variant_selected_bg": "#393939",
+            "variant_selected_text": "#ffffff",
+            "button_color": "#8e9569",
+            "button_text_color": "#ffffff",
+            "button_radius": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "featured_collection_DCcmUL"
+      ],
+      "name": "Featured collection",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "section_product_collection_links_Uc944h",
+    "complementary-products",
+    "section_feature_icons_EAt3CD",
+    "related-products",
+    "rich_text_nqYAiH",
+    "blocks_6fV6YF"
+  ]
+}

@@ -1,0 +1,200 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer_shopping_info_PrGcJA": {
+      "type": "footer-shopping-info",
+      "blocks": {
+        "column_f8PDBL": {
+          "type": "column",
+          "settings": {
+            "icon": "location",
+            "title": "Our Stores",
+            "text": "<p>London, Paris, Tokyo</p>"
+          }
+        },
+        "column_9nVpjd": {
+          "type": "column",
+          "settings": {
+            "icon": "gift",
+            "title": "Gift Wrapping",
+            "text": "<p>Available on all orders</p>"
+          }
+        },
+        "column_VMH6pt": {
+          "type": "column",
+          "settings": {
+            "icon": "return",
+            "title": "Free Returns",
+            "text": "<p>Easy global returns</p>"
+          }
+        },
+        "column_73RftU": {
+          "type": "column",
+          "settings": {
+            "icon": "payment",
+            "title": "Secure Payment",
+            "text": "<p>Flexible and simple</p>"
+          }
+        }
+      },
+      "block_order": [
+        "column_f8PDBL",
+        "column_9nVpjd",
+        "column_VMH6pt",
+        "column_73RftU"
+      ],
+      "disabled": true,
+      "settings": {
+        "text_alignment": "center",
+        "content_width": "page-width",
+        "icon_size": "normal",
+        "block_heading_size": "h5",
+        "grid_column_gap": 20,
+        "top_border": true,
+        "bottom_border": false,
+        "keylines_show_mobile": false,
+        "keylines_show": true,
+        "keylines_to_edge": false,
+        "keyline_colour": "0",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "top_padding": 40,
+        "bottom_padding": 40
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "logo_B6PCPJ": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/jax_logo_white.png",
+            "logo_size": 80,
+            "logo_full_width": false,
+            "logo_opacity": 100,
+            "alignment": "left",
+            "logo_padding_top": 20,
+            "logo_padding_bottom": 20,
+            "block_width": "column_width"
+          }
+        },
+        "link_list_bHnbAQ": {
+          "type": "link_list",
+          "settings": {
+            "heading": "SHOP",
+            "list_type_mobile": "normal",
+            "block_width": "column_width",
+            "alignment": "left",
+            "list_layout": "vertical",
+            "list_layout_mobile": "vertical",
+            "menu": "footer-shop"
+          }
+        },
+        "link_list_PEB86N": {
+          "type": "link_list",
+          "settings": {
+            "heading": "ABOUT US",
+            "list_type_mobile": "normal",
+            "block_width": "column_width",
+            "alignment": "left",
+            "list_layout": "vertical",
+            "list_layout_mobile": "vertical",
+            "menu": "footer-about"
+          }
+        },
+        "link_list_T8ctPw": {
+          "type": "link_list",
+          "settings": {
+            "heading": "MORE",
+            "list_type_mobile": "normal",
+            "block_width": "column_width",
+            "alignment": "left",
+            "list_layout": "vertical",
+            "list_layout_mobile": "vertical",
+            "menu": "footer-about-1"
+          }
+        },
+        "footer_social_media_block": {
+          "type": "social_media",
+          "settings": {
+            "heading": "Follow Us",
+            "alignment_mobile": "center",
+            "alignment": "left",
+            "block_width": "column_width",
+            "link_style": "icons-with-outline"
+          }
+        },
+        "text_9AqGTN": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "subtext": "<p>MUST BE 21+ TO PURCHASE. THE PRODUCTS DISPLAYED AND AVAILABLE FOR SALE ON THIS SITE (1) ARE HEMP-DERIVED CANNABINOID PRODUCTS THAT COMPLY WITH THE FEDERAL LEGAL LIMIT (2) DO NOT CLAIM TO DIAGNOSE, TREAT, MITIGATE, CURE, OR PREVENT ANY DISEASE, AND (3) HAVE NOT BEEN EVALUATED OR APPROVED BY THE UNITED STATES FOOD AND DRUG ADMINISTRATION (FDA) FOR SAFETY, EFFICACY, EFFECTIVENESS, OR QUALITY.</p>",
+            "text_size": "text-small",
+            "alignment_mobile": "center",
+            "alignment": "center",
+            "block_width": "full_width"
+          }
+        }
+      },
+      "block_order": [
+        "logo_B6PCPJ",
+        "link_list_bHnbAQ",
+        "link_list_PEB86N",
+        "link_list_T8ctPw",
+        "footer_social_media_block",
+        "text_9AqGTN"
+      ],
+      "settings": {
+        "footer_font_family": "body",
+        "footer_font_size": "body",
+        "footer_font_case": "uppercase",
+        "footer_heading_font_family": "heading",
+        "footer_heading_size": "large",
+        "footer_heading_style": "normal",
+        "footer_heading_margin": 10,
+        "footer_heading_opacity": 100,
+        "footer_link_vertical_spacing": 6,
+        "link_highlight_style": "opacity",
+        "footer_horizontal_spacing_desktop": 20,
+        "footer_padding_vertical": 40,
+        "footer_padding_bottom": 20,
+        "text_color": "fg-04",
+        "bg_color": "bg-04",
+        "main_footer_border": 0,
+        "main_footer_border_color": "dark",
+        "sub_footer_font_size": "small",
+        "sub_footer_border": true,
+        "sub_footer_border_color": "dark",
+        "sub_footer_border_width": "full",
+        "sub_footer_layout": "two-column",
+        "sub_footer_alignment": "align-center",
+        "show_policies": false,
+        "sub_footer_linklist": "",
+        "sub_footer_single_link": "",
+        "sub_footer_single_link_label": "",
+        "show_powered_by": false,
+        "follow_shop_enable": true,
+        "payment_enable": true,
+        "location_enable": true,
+        "location_format": "code",
+        "show_currency_symbol": true,
+        "language_enable": true,
+        "show_location_labels": false
+      }
+    }
+  },
+  "order": [
+    "footer_shopping_info_PrGcJA",
+    "footer"
+  ]
+}

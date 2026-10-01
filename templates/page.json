@@ -1,0 +1,151 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "content_width": "page-width-medium",
+        "hdr_alignment": "center",
+        "heading_hide": false,
+        "padding_top": 130,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_text_VVtXyY": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_rmdYea": {
+          "type": "heading",
+          "settings": {
+            "heading": "Contact Us",
+            "heading_size": "h1"
+          }
+        },
+        "text_8KKhCY": {
+          "type": "text",
+          "settings": {
+            "description": "<p>Please get in touch. We’d love to hear from you, and we’re here to help. We can be reached via any of the following:</p><p><strong>Email: </strong><a href=\"mailto:Support@jaxdrinx.com\" target=\"_blank\" title=\"mailto:Support@jaxdrinx.com\">Support@jaxdrinx.com</a></p><p><strong>Address: </strong>2000 Vassar Street, Unit #11372, Reno, NV 89510</p><p><strong>Phone: </strong>845-385-1026</p>",
+            "text_size": "std"
+          }
+        }
+      },
+      "block_order": [
+        "heading_rmdYea",
+        "text_8KKhCY"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "section_size": "flexible",
+        "content_width": "page-width",
+        "image_alignment": "right",
+        "dt_image_width": 50,
+        "card_spacing": 20,
+        "image": "shopify://shop_images/gift-box-lifestyle.png",
+        "image_ratio": "square",
+        "secondary_image_scale": "small",
+        "txt_alignment": "left",
+        "txt_vertical_alignment": "middle",
+        "txt_padding_top_mobile": 20,
+        "txt_padding_bottom_mobile": 20,
+        "txt_vertical_padding": 0,
+        "text_width": "medium",
+        "text_horizontal_position": "center",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "top_padding": 30,
+        "bottom_padding": 80,
+        "border_vertical": false,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "contact_form_BXxLkg": {
+      "type": "contact-form",
+      "blocks": {
+        "text_UFGGhH": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Please get in touch. We’d love to hear from you, and we’re here to help. We can be reached via any of the following:&nbsp;</p>",
+            "text_size": "normal",
+            "opacity": 100
+          }
+        },
+        "text_V3YPqz": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Email: </strong>Support@jaxdrinx.com</p><p><strong>Address: </strong>2000 Vassar Street, Unit #11372, Reno, NV 89510</p><p><strong>Phone: </strong>845.385.1026</p>",
+            "text_size": "small",
+            "opacity": 100
+          }
+        },
+        "field_name_E3gjUz": {
+          "type": "field_name",
+          "disabled": true,
+          "settings": {
+            "name_field_format": "single",
+            "field_required": true
+          }
+        },
+        "field_email_Xf6EYC": {
+          "type": "field_email",
+          "disabled": true,
+          "settings": {}
+        },
+        "field_telephone_UjLerV": {
+          "type": "field_telephone",
+          "disabled": true,
+          "settings": {
+            "field_required": false
+          }
+        },
+        "field_textarea_4XyJnj": {
+          "type": "field_textarea",
+          "disabled": true,
+          "settings": {
+            "field_required": true,
+            "row_height": 8
+          }
+        }
+      },
+      "block_order": [
+        "text_UFGGhH",
+        "text_V3YPqz",
+        "field_name_E3gjUz",
+        "field_email_Xf6EYC",
+        "field_telephone_UjLerV",
+        "field_textarea_4XyJnj"
+      ],
+      "disabled": true,
+      "name": "t:sections.contact-form.presets.name",
+      "settings": {
+        "heading": "Contact Us",
+        "heading_size": "h0",
+        "heading_alignment": "center",
+        "form_style": "outline",
+        "form_labels_show": true,
+        "label_size": "small",
+        "form_button_style": "solid",
+        "form_padding_top": 30,
+        "form_padding_bottom": 10,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_VVtXyY",
+    "contact_form_BXxLkg"
+  ]
+}

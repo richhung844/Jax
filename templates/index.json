@@ -1,0 +1,1693 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "video_banner_WN7jfU": {
+      "type": "video-banner",
+      "blocks": {
+        "heading_aW3Fgx": {
+          "type": "heading",
+          "settings": {
+            "heading": "IT’S NOT A NEW DRINK. IT’S A <br> <span class=\"new-way\">NEW WAY</span> TO DRINK.",
+            "heading_size": "hxxl",
+            "txt_alignment": "center"
+          }
+        },
+        "text_aPwnKj": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A precise, hemp-derived THC microdose you add to any drink. One milligram per spray, so you can dial it in precisely.</p>",
+            "text_size": "text-large"
+          }
+        },
+        "buttons_icMx9B": {
+          "type": "buttons",
+          "settings": {
+            "btn_layout_mobile": "stacked",
+            "btn_layout": "inline",
+            "btn_alignment": "auto",
+            "btn_width_mobile": "auto",
+            "btn_width_desktop": "auto",
+            "btn_width_desktop_value": 200,
+            "btn_color_scheme": "default",
+            "padding_top": 20,
+            "padding_bottom": 20,
+            "btn_one_show": true,
+            "btn_one_txt": "Shop Now",
+            "btn_one_link": "shopify://collections/inventory",
+            "btn_one_style": "button--solid",
+            "btn_two_show": false,
+            "btn_two_txt": "Button text",
+            "btn_two_link": "",
+            "btn_two_style": "button--solid"
+          }
+        }
+      },
+      "block_order": [
+        "heading_aW3Fgx",
+        "text_aPwnKj",
+        "buttons_icMx9B"
+      ],
+      "custom_css": [
+        ".button {background: transparent !important; color: #fff !important; border: 2px solid #fff !important; box-shadow: none !important;}",
+        ".button:hover {background: #8e9569 !important; color: #fff !important; border-color: #8e9569 !important;}",
+        ".new-way {text-decoration: underline; text-decoration-thickness: 4px; text-underline-offset: 6px;}"
+      ],
+      "name": "t:sections.video-banner.presets.name",
+      "settings": {
+        "banner_size": "banner-style-fullscreen",
+        "video_url": "shopify://files/videos/JAX_hero_video.mp4",
+        "video_mob_url": "shopify://files/videos/JAX_hero_mobile_video.mp4",
+        "overlay_level": 15,
+        "video_size": "100",
+        "video_position": "center",
+        "video_margin_mobile": 0,
+        "video_margin_desktop": 0,
+        "enable_playback_pause": false,
+        "enable_audio": false,
+        "txt_position": "bottom_center",
+        "txt_alignment": "center",
+        "content_width": 90,
+        "text_vertical_spacing": 2,
+        "top_padding": 0,
+        "bottom_padding": 0,
+        "text_blend_effect": "none",
+        "fade_in_text": true,
+        "scroll_fade_effect": false,
+        "scroll_darken_effect": false,
+        "scroll_overlap_effect": false,
+        "text_color": "fg-white",
+        "bg_color": "#000000"
+      }
+    },
+    "section_feature_icons_9Thz3w": {
+      "type": "section-feature-icons",
+      "blocks": {
+        "image_996YCN": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/0.svg",
+            "heading": "Calories",
+            "description": ""
+          }
+        },
+        "image_L9GLVz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/0.svg",
+            "heading": "Sugar",
+            "description": ""
+          }
+        },
+        "image_yRi9TL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/0.svg",
+            "heading": "Mess",
+            "description": ""
+          }
+        },
+        "image_t3A9Fk": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/0.svg",
+            "heading": "Hangovers",
+            "description": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_996YCN",
+        "image_L9GLVz",
+        "image_yRi9TL",
+        "image_t3A9Fk"
+      ],
+      "name": "t:sections.feature_icons.presets.name",
+      "settings": {
+        "section_label": "",
+        "heading": "",
+        "subheading": "",
+        "heading_size": "h2",
+        "btn_enable": false,
+        "btn_txt": "",
+        "btn_link": "",
+        "btn_style": "solid",
+        "content_width": "page-width",
+        "content_alignment": "center",
+        "icon_size_mobile": 48,
+        "icon_size_tablet": 60,
+        "icon_size_desktop": 80,
+        "grid_columns_mobile": "2",
+        "grid_columns_tablet": "2",
+        "grid_columns_desktop": "4",
+        "icon_spacing_mobile": 92,
+        "icon_spacing_tablet": 140,
+        "icon_spacing_desktop": 180,
+        "icon_layout": "vertical",
+        "icon_vertical_alignment": "top",
+        "icon_title_size": "h3",
+        "icon_description_size": "normal",
+        "icon_to_title_spacing": 12,
+        "icon_title_spacing_bottom": 8,
+        "icon_text_max_width": 300,
+        "text_color": "fg-05",
+        "bg_color": "bg-body",
+        "btn_color_scheme": "default",
+        "top_padding": 80,
+        "bottom_padding": 80,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "rich_text_AKC4fz": {
+      "type": "rich-text",
+      "blocks": {
+        "caption_7he8Qk": {
+          "type": "caption",
+          "settings": {
+            "caption": "",
+            "secondary_caption": "",
+            "image_size": "small",
+            "image_shape": "round",
+            "alignment": "left",
+            "opacity": 100,
+            "padding_top": 0,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "caption_7he8Qk"
+      ],
+      "disabled": true,
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "content_width": "page-width",
+        "content_horizontal_position": "center",
+        "bg_image_darken": 0,
+        "bg_image_blur": 0,
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top": 0,
+        "padding_bottom": 10,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "video_with_text_rBJWJd": {
+      "type": "video-with-text",
+      "blocks": {
+        "heading_wDepQg": {
+          "type": "heading",
+          "settings": {
+            "heading": "Twist. Stream. Vibe.",
+            "heading_size": "h1"
+          }
+        },
+        "caption_JDe9N4": {
+          "type": "caption",
+          "settings": {
+            "caption": ""
+          }
+        },
+        "text_e6DjiN": {
+          "type": "text",
+          "settings": {
+            "description": "<h2>01. Twist&nbsp;</h2><p>One twist. Everything the night deserves, and nothing it doesn't.</p><h2><br/>02. Stream</h2><p>Spray into water, juice, mocktail, or whatever. Tasteless, odorless. You set the dose.</p><h2><br/>03. Vibe</h2><p>A light, social lift in about five to fifteen minutes.</p><h3><br/>No packets, no eye droppers, no guessing, all vibe.</h3>",
+            "text_size": "std"
+          }
+        },
+        "button_MwXkbT": {
+          "type": "button",
+          "settings": {
+            "btn_txt": "Shop Now",
+            "btn_link": "shopify://collections/inventory",
+            "button_colour": "primary-colour",
+            "btn_style": "solid",
+            "button_width_mobile": "default"
+          }
+        }
+      },
+      "block_order": [
+        "heading_wDepQg",
+        "caption_JDe9N4",
+        "text_e6DjiN",
+        "button_MwXkbT"
+      ],
+      "name": "t:sections.video-with-text.presets.name",
+      "settings": {
+        "section_size": "flexible",
+        "card_spacing": 20,
+        "content_width": "page-width-full-grid",
+        "video_url": "shopify://files/videos/jax-hero-video.mp4",
+        "image_ratio": "fit",
+        "autoplay": true,
+        "play_button_color": "default",
+        "enable_video_looping": false,
+        "float_after_playback": true,
+        "secondary_image_scale": "small",
+        "dt_image_width": 50,
+        "video_alignment": "right",
+        "txt_alignment": "left",
+        "txt_vertical_alignment": "middle",
+        "txt_padding_top_mobile": 20,
+        "txt_padding_bottom_mobile": 20,
+        "txt_vertical_padding": 0,
+        "text_width": "medium",
+        "text_horizontal_position": "center",
+        "text_color": "fg-body",
+        "bg_color": "bg-02",
+        "top_padding": 80,
+        "bottom_padding": 80,
+        "border_vertical": false,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "section_media_collage_dwhqpL": {
+      "type": "section-media-collage",
+      "blocks": {
+        "image_xXVTCb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/dial-lifestyle-ezgif.com-gif-maker_1.gif",
+            "image_size": "half_width",
+            "image_ratio": "square",
+            "image_padding_mobile": 0,
+            "image_padding": 0,
+            "image_offset_vertical": 0,
+            "image_offset_horizontal": 0
+          }
+        },
+        "image_M7pVaP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/JAX_new.gif",
+            "image_size": "half_width",
+            "image_ratio": "fit",
+            "image_padding_mobile": 0,
+            "image_padding": 60,
+            "image_offset_vertical": 0,
+            "image_offset_horizontal": 0
+          }
+        }
+      },
+      "block_order": [
+        "image_xXVTCb",
+        "image_M7pVaP"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 749px) {.collage-grid {grid-template-columns: 1fr !important; grid-template-rows: auto !important; } .collage-image {width: 100% !important; grid-column: auto !important; grid-row: auto !important; }}"
+      ],
+      "name": "t:sections.collage.presets.name",
+      "settings": {
+        "section_label": "",
+        "heading": "",
+        "heading_size": "h2",
+        "description": "",
+        "hdr_alignment": "center",
+        "header_style": "normal",
+        "header_opacity": 100,
+        "sticky_header": false,
+        "sticky_header_position": "middle",
+        "content_layout": "grid",
+        "arrow_style": "solid-inverted",
+        "content_width": "page-width-full",
+        "grid_spacing": "default-grid",
+        "grid_columns_tablet": 2,
+        "grid_columns_desktop": 2,
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top": 20,
+        "padding_bottom": 40
+      }
+    },
+    "rich_text_dNhaTR": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_UFqt76": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get JAX",
+            "heading_size": "h0",
+            "alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 20
+          }
+        }
+      },
+      "block_order": [
+        "heading_UFqt76"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "content_width": "page-width",
+        "content_horizontal_position": "center",
+        "bg_image_darken": 0,
+        "bg_image_blur": 0,
+        "text_color": "fg-04",
+        "bg_color": "bg-03",
+        "padding_top": 60,
+        "padding_bottom": 0,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "179062725714c0d7e7": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_929ea9f_LdRbHB": {
+          "type": "featured-product-new",
+          "settings": {
+            "product": "jax-set",
+            "desktop_width_percent": 100,
+            "show_header": false,
+            "section_heading": "Featured product",
+            "section_subheading": "<p>Discover a new favorite.</p>",
+            "header_link_label": "Discover more",
+            "header_link": "",
+            "header_alignment": "left",
+            "header_top": 20,
+            "header_bottom": 20,
+            "badge_label": "SPECIAL OFFER",
+            "badge_link": "",
+            "badge_background": "#8e9569",
+            "badge_text_color": "#ffffff",
+            "custom_title": "",
+            "custom_description": "<p>The JAX Set is the best way to start Jaxxing. Our introductory offer includes <strong>1 Stream-X case</strong> and <strong>1 Elixir Pod</strong> for just <strong>$30.</strong> Enjoy this special launch price — a <strong>$50 value</strong> — and start Jaxxing.&nbsp;</p><p><a href=\"/products/jax-set\" title=\"The JAX Set\">LEARN MORE</a></p>",
+            "learn_more_label": "",
+            "learn_more_url": "",
+            "content_alignment": "left",
+            "button_label": "ADD TO BAG",
+            "button_alignment": "left",
+            "button_color": "#8e9569",
+            "button_text_color": "#ffffff",
+            "button_hover_color": "#393939",
+            "button_hover_text_color": "#ffffff",
+            "callout_alignment": "flex-start",
+            "icon_size": 40,
+            "icon_color": "#393939",
+            "callout_heading_color": "#393939",
+            "callout_text_color": "#393939",
+            "callout_1_image": "shopify://shop_images/free-ship_2c75af4b-8dac-40e7-a3ea-e3a1bd9655ac.png",
+            "callout_1_heading": "FREE SHIPPING",
+            "callout_1_text": "Ships to 44 states",
+            "callout_1_url": "#AccContent-collapsible_row_RKi6Lk-template--23952653418582__collapsible_content_cHpXzB",
+            "callout_1_heading_link": false,
+            "callout_1_whole_link": true,
+            "callout_2_image": "shopify://shop_images/USA-color.png",
+            "callout_2_heading": "FARM TO POD",
+            "callout_2_text": "Made in USA",
+            "callout_2_url": "",
+            "callout_2_heading_link": false,
+            "callout_2_whole_link": false,
+            "callout_3_image": "shopify://shop_images/case-color.png",
+            "callout_3_heading": "FREE CASE",
+            "callout_3_text": "Stream-X on us",
+            "callout_3_url": "",
+            "callout_3_heading_link": false,
+            "callout_3_whole_link": false,
+            "image_scale": 100,
+            "image_alignment": "center",
+            "mobile_order": "image-first",
+            "frame_padding": 18,
+            "content_padding": 55,
+            "column_gap": 0,
+            "frame_color": "#8e9569",
+            "panel_color": "#ffffff"
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_eaecadc_ALyNxM": {
+          "type": "featured-product",
+          "disabled": true,
+          "settings": {
+            "product": "jax-set",
+            "section_heading": "",
+            "section_subheading": "",
+            "show_title": true,
+            "show_price": true,
+            "show_description": true,
+            "custom_description": "<p>The JAX Set is the best way to start Jaxxing. Our introductory offer includes 1 <strong>Stream-X </strong>case and an <strong>Elixir Pod</strong> all for just<strong> $30.&nbsp;</strong></p>",
+            "show_learn_more": true,
+            "learn_label": "LEARN MORE",
+            "show_variants": true,
+            "show_quantity": false,
+            "show_button": true,
+            "button_label": "ADD TO BAG",
+            "desktop_width_percent": 100,
+            "card_width": 850,
+            "image_size": 100,
+            "image_ratio": "1 / 1",
+            "image_fit": "contain",
+            "section_bg": "#8e9569",
+            "card_bg": "#ffffff",
+            "text_color": "#393939",
+            "button_bg": "#8e9569",
+            "button_text": "#ffffff",
+            "border_color": "#ffffff",
+            "border_radius": 0,
+            "section_padding": 30,
+            "card_padding": 30,
+            "element_spacing": 16,
+            "show_benefits": true,
+            "icons_per_row": "3",
+            "mobile_icon_layout": "stack",
+            "icon_alignment": "center",
+            "icon_text_alignment": "center",
+            "icon_gap": 16,
+            "icon_top_spacing": 20,
+            "icon_size": 60,
+            "benefit_heading_color": "#393939",
+            "benefit_text_color": "#393939",
+            "benefit_1_image": "shopify://shop_images/free-ship-color.png",
+            "benefit_1_heading": "FREE SHIPPING",
+            "benefit_1_text": "Ships to 44 States",
+            "benefit_1_link": "#shopify-section-template--21391878357078__collapsible_content_cHpXzB",
+            "benefit_2_image": "shopify://shop_images/USA-color.png",
+            "benefit_2_heading": "FARM TO POD",
+            "benefit_2_text": "Made in the USA",
+            "benefit_2_link": "",
+            "benefit_3_image": "shopify://shop_images/case-color.png",
+            "benefit_3_heading": "FREE CASE",
+            "benefit_3_text": "Stream-X case on us",
+            "benefit_3_link": "",
+            "benefit_4_heading": "",
+            "benefit_4_text": "",
+            "benefit_4_link": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_929ea9f_LdRbHB",
+        "ai_gen_block_eaecadc_ALyNxM"
+      ],
+      "settings": {}
+    },
+    "17907226694065e486": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_6a3f75c_pUkbYq": {
+          "type": "ai_gen_block_6a3f75c",
+          "settings": {
+            "product": "jax-set",
+            "custom_title": "The Jax Set",
+            "description": "<p>The JAX Set is the best way to start Jaxxing. Our introductory offer includes <strong>1 Stream-X case</strong> and <strong>1 Elixir Pod</strong> for just <strong>$30.</strong> Enjoy this special launch price — a <strong>$50 value</strong> — and start Jaxxing.</p>",
+            "learn_more_text": "LEARN MORE",
+            "learn_more_url": "shopify://products/jax-set",
+            "button_label": "ADD TO BAG",
+            "badge_text": "SPECIAL OFFER",
+            "callout_1_image": "shopify://shop_images/USA-color.png",
+            "callout_1_icon": "leaf",
+            "callout_1_heading": "Farm to Pod",
+            "callout_1_text": "Made in USA",
+            "callout_2_image": "shopify://shop_images/free-ship_2c75af4b-8dac-40e7-a3ea-e3a1bd9655ac.png",
+            "callout_2_icon": "drop",
+            "callout_2_heading": "free shipping",
+            "callout_2_text": "Ships to 44 states",
+            "callout_3_image": "shopify://shop_images/case-color.png",
+            "callout_3_icon": "spark",
+            "callout_3_heading": "Free Case",
+            "callout_3_text": "Stream-X case on us",
+            "callout_heading_size": 15,
+            "callout_text_size": 14,
+            "desktop_width_percent": 100,
+            "frame_thickness": 16,
+            "content_padding": 80,
+            "image_padding": 20,
+            "column_gap": 0,
+            "callout_gap": 12,
+            "image_scale": 85,
+            "icon_size": 40,
+            "content_alignment": "left",
+            "mobile_order": "image_first",
+            "frame_color": "#8e9569",
+            "image_background": "#ffffff",
+            "text_color": "#393939",
+            "link_color": "#393939",
+            "icon_color": "#393939",
+            "callout_heading_color": "#393939",
+            "callout_text_color": "#393939",
+            "badge_background": "#8e9569",
+            "badge_text_color": "#ffffff",
+            "button_background": "#8e9569",
+            "button_text_color": "#ffffff",
+            "button_border_color": "#8e9569",
+            "button_hover_background": "#393939",
+            "button_hover_text": "#ffffff"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_6a3f75c_pUkbYq"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
+    "featured_product_HxFVd6": {
+      "type": "featured-product",
+      "blocks": {
+        "title_FidJP6": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_9Kbifj": {
+          "type": "price",
+          "settings": {
+            "price_show_discount": true,
+            "price_show_taxes": false,
+            "block_padding_top": 10,
+            "block_padding_bottom": 10
+          }
+        },
+        "description_wbBXcd": {
+          "type": "description",
+          "settings": {
+            "description": "<p>The JAX Set is the best way to start Jaxxing. Our introductory offer includes <strong>1</strong> <strong>Stream-X </strong>case and <strong>1</strong> <strong>Elixir Pod</strong> all for just<strong> $30. $50 value! &nbsp;</strong><a href=\"/products/jax-set\" title=\"The JAX Set\"><strong>LEARN MORE</strong></a></p>",
+            "block_padding_top": 0,
+            "block_padding_bottom": 0
+          }
+        },
+        "button_DwMrRb": {
+          "type": "button",
+          "settings": {
+            "button_type": "buy",
+            "button_text": "ADD TO BAG",
+            "button_style": "solid",
+            "button_width_mobile": "full-width",
+            "button_width_desktop": "default"
+          }
+        }
+      },
+      "block_order": [
+        "title_FidJP6",
+        "price_9Kbifj",
+        "description_wbBXcd",
+        "button_DwMrRb"
+      ],
+      "disabled": true,
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "product": "jax-set",
+        "show_tag": false,
+        "image": "shopify://shop_images/JAX_products_jax_set.png",
+        "image_ratio": "square",
+        "main_media_width": 50,
+        "secondary_image_scale": "large",
+        "text_color": "fg-01",
+        "bg_color": "bg-02",
+        "btn_color_scheme": "default",
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark",
+        "txt_alignment": "center",
+        "txt_vertical_alignment": "middle",
+        "txt_vertical_padding": 10,
+        "content_width": "page-width",
+        "image_alignment": "right",
+        "card_spacing": 30,
+        "top_padding": 40,
+        "bottom_padding": 40
+      }
+    },
+    "1790634333f502063b": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_5bd42a8_LzbP3w": {
+          "type": "featured-collection",
+          "name": "Featured collection",
+          "settings": {
+            "collection": "inventory",
+            "heading": "",
+            "show_heading": false,
+            "products_to_show": 3,
+            "desktop_width_percent": 100,
+            "max_section_width": 1500,
+            "columns_desktop": "3",
+            "columns_mobile": "2",
+            "mobile_carousel": true,
+            "padding_desktop": 25,
+            "padding_mobile": 25,
+            "side_padding": 20,
+            "gap": 20,
+            "card_padding": 16,
+            "card_radius": 0,
+            "show_title": true,
+            "show_price": true,
+            "show_price_description": true,
+            "show_description": true,
+            "show_learn_more": true,
+            "show_variants": true,
+            "show_add_button": true,
+            "learn_label": "LEARN MORE",
+            "add_label": "ADD TO BAG",
+            "success_label": "",
+            "description_1": "<p><strong>Get More, Save More.</strong><em><strong>&nbsp;</strong></em>Stock up on JAX Refill Pods and save as you go.</p>",
+            "description_2": "<p>Get a replacement or more JAX Stream-X cases.&nbsp;<em>Coming soon</em>:&nbsp;<em>get additional colors, materials, sizes and even more fun ways to collect & personalize your JAX, too!&nbsp;</em></p>",
+            "description_3": "<p>Give the gift of JAX. Each premium box comes with a Stream-X case and 2 Elixir Pods. It’s the perfect way to share the joy of JAX with someone you love.&nbsp;</p>",
+            "description_4": "",
+            "description_5": "",
+            "description_6": "",
+            "description_7": "",
+            "description_8": "",
+            "description_9": "",
+            "description_10": "",
+            "description_11": "",
+            "description_12": "",
+            "image_ratio": "1 / 1",
+            "image_fit": "contain",
+            "product_title_size": 20,
+            "price_size": 18,
+            "text_size": 16,
+            "variant_size": 40,
+            "variant_gap": 8,
+            "variant_radius": 0,
+            "section_color": "#8e9569",
+            "card_color": "#ffffff",
+            "border_color": "#ffffff",
+            "title_color": "#393939",
+            "price_color": "#393939",
+            "text_color": "#393939",
+            "variant_bg": "#ffffff",
+            "variant_text": "#393939",
+            "variant_border": "#393939",
+            "variant_selected_bg": "#393939",
+            "variant_selected_text": "#ffffff",
+            "button_color": "#8e9569",
+            "button_text_color": "#ffffff",
+            "button_radius": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_5bd42a8_LzbP3w"
+      ],
+      "settings": {}
+    },
+    "section_feature_icons_8f9yXt": {
+      "type": "section-feature-icons",
+      "blocks": {
+        "image_pJckAC": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/betterbuzz.png",
+            "heading": "A Better Buzz",
+            "description": "<p>One milligram of THC per spray, added by you.</p>"
+          }
+        },
+        "image_eFLMXT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/goanywhere.png",
+            "heading": "Go where it takes you",
+            "description": "<p>Slim, one-handed, swappable pods. Pocket, purse, or pack.</p>"
+          }
+        },
+        "image_VYCwjT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/enjoy_6dc5858e-70b4-4785-977a-d453855e08ee.png",
+            "heading": "Enjoy Anytime",
+            "description": "<p>Enjoy the moment, whenever. A light social lift, no \"next-day tax\".</p>"
+          }
+        }
+      },
+      "block_order": [
+        "image_pJckAC",
+        "image_eFLMXT",
+        "image_VYCwjT"
+      ],
+      "name": "t:sections.feature_icons.presets.name",
+      "settings": {
+        "section_label": "",
+        "heading": "",
+        "subheading": "",
+        "heading_size": "h1",
+        "btn_enable": false,
+        "btn_txt": "",
+        "btn_link": "",
+        "btn_style": "solid",
+        "content_width": "page-width",
+        "content_alignment": "center",
+        "icon_size_mobile": 80,
+        "icon_size_tablet": 80,
+        "icon_size_desktop": 120,
+        "grid_columns_mobile": "1",
+        "grid_columns_tablet": "auto",
+        "grid_columns_desktop": "3",
+        "icon_spacing_mobile": 40,
+        "icon_spacing_tablet": 80,
+        "icon_spacing_desktop": 80,
+        "icon_layout": "horizontal",
+        "icon_vertical_alignment": "top",
+        "icon_title_size": "h3",
+        "icon_description_size": "normal",
+        "icon_to_title_spacing": 12,
+        "icon_title_spacing_bottom": 8,
+        "icon_text_max_width": 300,
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "btn_color_scheme": "default",
+        "top_padding": 60,
+        "bottom_padding": 60,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "newsletter_EWzRDp": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_9KbHbj": {
+          "type": "heading",
+          "settings": {
+            "heading": "Join the JAX community.",
+            "heading_size": "h2"
+          }
+        },
+        "paragraph_7AYxyt": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Get savings, early access to new products and more.</p>"
+          }
+        },
+        "email_form_DWm4Ei": {
+          "type": "email_form",
+          "settings": {
+            "form_width": "fixed",
+            "form_style": "outline",
+            "newsletter_submit_style": "icon"
+          }
+        }
+      },
+      "block_order": [
+        "heading_9KbHbj",
+        "paragraph_7AYxyt",
+        "email_form_DWm4Ei"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "alignment": "center",
+        "section_layout": "stacked",
+        "bg_image": "shopify://shop_images/drop.png",
+        "text_color": "fg-04",
+        "bg_color": "bg-04",
+        "padding_top": 150,
+        "padding_bottom": 140
+      }
+    },
+    "section_feature_icons_kC4dUV": {
+      "type": "section-feature-icons",
+      "blocks": {
+        "image_bXpBGU": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/insert_98fe9a96-646d-44c3-bfdf-65ca7db96c76.png",
+            "heading": "01. Insert Pod into case",
+            "description": ""
+          }
+        },
+        "image_B6jcmT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/twist_66e54bad-fc7d-485f-82c4-dc4d2115d9b6.png",
+            "heading": "02. Twist",
+            "description": ""
+          }
+        },
+        "image_NHmhhb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/vibe-1_5b1a8364-63e5-4596-820b-24bf4589531e.png",
+            "heading": "03. Stream",
+            "description": ""
+          }
+        },
+        "image_XKzcXW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/vibe-1_5d22ca2d-908a-4f24-8ce2-980e0c09e7f8.png",
+            "heading": "04. Vibe",
+            "description": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_bXpBGU",
+        "image_B6jcmT",
+        "image_NHmhhb",
+        "image_XKzcXW"
+      ],
+      "name": "t:sections.feature_icons.presets.name",
+      "settings": {
+        "section_label": "",
+        "heading": "How to Jax",
+        "subheading": "",
+        "heading_size": "h0",
+        "btn_enable": false,
+        "btn_txt": "",
+        "btn_link": "",
+        "btn_style": "solid",
+        "content_width": "page-width",
+        "content_alignment": "center",
+        "icon_size_mobile": 100,
+        "icon_size_tablet": 100,
+        "icon_size_desktop": 128,
+        "grid_columns_mobile": "2",
+        "grid_columns_tablet": "2",
+        "grid_columns_desktop": "4",
+        "icon_spacing_mobile": 40,
+        "icon_spacing_tablet": 80,
+        "icon_spacing_desktop": 140,
+        "icon_layout": "vertical",
+        "icon_vertical_alignment": "center",
+        "icon_title_size": "h3",
+        "icon_description_size": "normal",
+        "icon_to_title_spacing": 12,
+        "icon_title_spacing_bottom": 8,
+        "icon_text_max_width": 300,
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "btn_color_scheme": "default",
+        "top_padding": 80,
+        "bottom_padding": 80,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "rich_text_pUEeqn": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_axk3Vq": {
+          "type": "heading",
+          "settings": {
+            "heading": "What's In the Pod?",
+            "heading_size": "h0",
+            "alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 10
+          }
+        },
+        "text_RHxmRQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Tasteless, odorless, and all natural Hemp-derived THC</p>",
+            "text_size": "text-std",
+            "alignment": "center",
+            "text_indent": "noindent",
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "heading_axk3Vq",
+        "text_RHxmRQ"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "content_width": "page-width-narrow",
+        "content_horizontal_position": "center",
+        "bg_image_darken": 0,
+        "bg_image_blur": 0,
+        "text_color": "fg-04",
+        "bg_color": "bg-04",
+        "padding_top": 80,
+        "padding_bottom": 30,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "image_with_text_ngPEXn": {
+      "type": "image-with-text",
+      "blocks": {
+        "text_KiawX4": {
+          "type": "text",
+          "settings": {
+            "description": "<h3>Precise&nbsp;</h3><h3>Fast-Acting</h3><h3>1MG Per Spray</h3><h3>Approximately 50 Sprays Per Pod</h3><h3>Pods Swap in Seconds</h3><h3>Reusable</h3><h3>TSA Compliant</h3>",
+            "text_size": "std"
+          }
+        },
+        "button_maGyWB": {
+          "type": "button",
+          "settings": {
+            "btn_color_scheme": "default",
+            "button_width_mobile": "default",
+            "btn_txt": "Shop Now",
+            "btn_link": "shopify://collections/inventory",
+            "btn_style": "solid",
+            "btn_two_enable": false,
+            "button_layout": "stacked",
+            "btn_two_txt": "Button label",
+            "btn_two_link": "",
+            "btn_two_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "text_KiawX4",
+        "button_maGyWB"
+      ],
+      "custom_css": [
+        "H3 {line-height: 1.8; margin-bottom: 1rem;}"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "section_size": "flexible",
+        "content_width": "page-width-full-grid",
+        "image_alignment": "right",
+        "dt_image_width": 40,
+        "card_spacing": 40,
+        "image": "shopify://shop_images/pod_4a72a773-2126-40b8-99ac-6ff44deacc61.png",
+        "image_ratio": "portrait",
+        "secondary_image_scale": "small",
+        "txt_alignment": "left",
+        "txt_vertical_alignment": "middle",
+        "txt_padding_top_mobile": 20,
+        "txt_padding_bottom_mobile": 20,
+        "txt_vertical_padding": 0,
+        "text_width": "medium",
+        "text_horizontal_position": "center",
+        "text_color": "fg-04",
+        "bg_color": "bg-04",
+        "top_padding": 40,
+        "bottom_padding": 0,
+        "border_vertical": false,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "rich_text_tnjkhx": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_VW3H6k": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get Social With Jax",
+            "heading_size": "h0",
+            "alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 20
+          }
+        }
+      },
+      "block_order": [
+        "heading_VW3H6k"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "content_width": "page-width-narrow",
+        "content_horizontal_position": "center",
+        "bg_image_darken": 0,
+        "bg_image_blur": 0,
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top": 80,
+        "padding_bottom": 0,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "178905854857836d74": {
+      "type": "apps",
+      "blocks": {
+        "gsc_instagram_feed_instafeed_rijK9D": {
+          "type": "shopify://apps/gsc-instagram-feed/blocks/instafeed/96970b1b-b770-454f-b16b-51f47e1aa4ed",
+          "settings": {
+            "widget_id": "GSC-gfsFpaeNGrzOzAM"
+          }
+        }
+      },
+      "block_order": [
+        "gsc_instagram_feed_instafeed_rijK9D"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "rich_text_ipyzqB": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_rFLbiM": {
+          "type": "heading",
+          "settings": {
+            "heading": "You don't have to be a control freak, to prefer being in control",
+            "heading_size": "h1",
+            "alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 20
+          }
+        }
+      },
+      "block_order": [
+        "heading_rFLbiM"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "content_width": "page-width-medium",
+        "content_horizontal_position": "center",
+        "bg_image_darken": 0,
+        "bg_image_blur": 0,
+        "text_color": "fg-04",
+        "bg_color": "bg-04",
+        "padding_top": 60,
+        "padding_bottom": 0,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "17890771252962836c": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_849db23_dzXmny": {
+          "type": "ai_gen_block_849db23",
+          "settings": {
+            "heading": "",
+            "feature_heading": "",
+            "jax_heading": "",
+            "alcohol_heading": "Alcohol",
+            "gummies_heading": "Gummies & Edibles",
+            "drinks_heading": "Canned THC Drinks",
+            "droppers_heading": "Droppers & Packets",
+            "logo": "shopify://shop_images/Jax_Logo_Transparent.png",
+            "row_1_label": "Dose control:",
+            "row_1_detail": "you dial it, one milligram at a time",
+            "row_1_gummies_check": false,
+            "row_2_label": "Onset:",
+            "row_2_detail": "5–15 minutes",
+            "row_2_gummies_check": false,
+            "row_3_label": "Taste impact:",
+            "row_3_detail": "none; your drink stays your drink",
+            "row_3_gummies_check": false,
+            "row_4_label": "Discretion and portability:",
+            "row_4_detail": "Ready when you are",
+            "row_4_gummies_check": false,
+            "row_5_label": "No morning after or next-day tax:",
+            "row_5_detail": "Feel like yourself tomorrow",
+            "row_5_gummies_check": false,
+            "checkmark": "✓",
+            "x_mark": "x",
+            "check_label": "Available",
+            "x_label": "Unavailable",
+            "desktop_width_percent": 100,
+            "heading_font": "anton_n4",
+            "body_font": "karla_n4",
+            "heading_size": 52,
+            "mobile_heading_size": 32,
+            "body_size": 17,
+            "background_color": "#393939",
+            "highlight_color": "#eee8db",
+            "heading_color": "#ffffff",
+            "text_color": "#ffffff",
+            "highlight_text_color": "#393939",
+            "accent_color": "#8e9569",
+            "checkmark_color": "#ffffff",
+            "x_color": "#ffffff",
+            "divider_color": "#464646"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_849db23_dzXmny"
+      ],
+      "settings": {}
+    },
+    "multicolumn_C8XHfb": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_jfEXrA": {
+          "type": "column",
+          "settings": {
+            "column_span": "1",
+            "image": "shopify://shop_images/lemonade.png",
+            "title": "Fresh Lemonade",
+            "heading_top_margin": 5,
+            "heading_margin": 5,
+            "text": "<p><em><strong>Porch weather in a glass.</strong></em></p>",
+            "block_btn_style": "link--underlined",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_EjT6CE": {
+          "type": "column",
+          "settings": {
+            "column_span": "1",
+            "image": "shopify://shop_images/seltzer.png",
+            "title": "Selzter & Lime",
+            "heading_top_margin": 5,
+            "heading_margin": 5,
+            "text": "<p><em><strong>The default the never misses.</strong></em></p>",
+            "block_btn_style": "link--underlined",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_7yFa6Q": {
+          "type": "column",
+          "settings": {
+            "column_span": "1",
+            "image": "shopify://shop_images/iced_tea.png",
+            "title": "Iced Tea",
+            "heading_top_margin": 5,
+            "heading_margin": 5,
+            "text": "<p><em><strong>Slow afternoons, dialed.</strong></em></p>",
+            "block_btn_style": "link--underlined",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_qzVtYq": {
+          "type": "column",
+          "settings": {
+            "column_span": "1",
+            "image": "shopify://shop_images/sash-gabriel-dupe_2.jpg",
+            "title": "Ginger Beer",
+            "heading_top_margin": 5,
+            "heading_margin": 5,
+            "text": "<p><em><strong>All the bite. None of the Bourbon.</strong></em></p>",
+            "block_btn_style": "link--underlined",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_kRjA9d": {
+          "type": "column",
+          "settings": {
+            "column_span": "1",
+            "image": "shopify://shop_images/ChatGPT_Image_Sep_24_2026_12_12_59_PM.png",
+            "title": "Margarita Mocktail",
+            "heading_top_margin": 5,
+            "heading_margin": 5,
+            "text": "<p><em><strong>Salt the rim. Skip the tequila.</strong></em></p>",
+            "block_btn_style": "link--underlined",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_8cUiiW": {
+          "type": "column",
+          "settings": {
+            "column_span": "1",
+            "image": "shopify://shop_images/kombucha.png",
+            "title": "Kombucha",
+            "heading_top_margin": 5,
+            "heading_margin": 5,
+            "text": "<p><em><strong>Your call. We don't judge.</strong></em></p>",
+            "block_btn_style": "link--underlined",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_jfEXrA",
+        "column_EjT6CE",
+        "column_7yFa6Q",
+        "column_qzVtYq",
+        "column_kRjA9d",
+        "column_8cUiiW"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "section_label": "",
+        "heading": "Jax It Up",
+        "heading_size": "h0",
+        "hdr_alignment": "center",
+        "subheading": "<p>If you can pour it, you can JAX it.</p>",
+        "btn_enable": true,
+        "btn_txt": "Shop Now",
+        "btn_link": "shopify://collections/inventory",
+        "btn_style": "solid",
+        "btn_position_mobile": "bottom",
+        "btn_position_desktop": "bottom",
+        "grid_layout": "carousel-mobile",
+        "arrow_style": "solid",
+        "arrow_position": "bottom-center",
+        "grid_columns": 3,
+        "grid_column_gap": 20,
+        "keylines_show": false,
+        "keylines_show_mobile": false,
+        "keylines_mobile_width": "small",
+        "keyline_opacity": 20,
+        "column_layout": "stacked",
+        "column_vertical_alignment": "top",
+        "card_image_alignment": "center",
+        "image_size": "full-width",
+        "image_ratio": "square",
+        "text_alignment": "center",
+        "column_heading_size": "h3",
+        "block_button_width": "auto",
+        "link_opening": "page",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "btn_color_scheme": "default",
+        "bg_image_darken": 0,
+        "top_padding": 80,
+        "bottom_padding": 50,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "rich_text_gBky6F": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_kcaPdM": {
+          "type": "heading",
+          "settings": {
+            "heading": "we are jax",
+            "heading_size": "h0",
+            "alignment": "center",
+            "padding_top": 20,
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "heading_kcaPdM"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "content_width": "page-width",
+        "content_horizontal_position": "center",
+        "bg_image_darken": 0,
+        "bg_image_blur": 0,
+        "text_color": "fg-body",
+        "bg_color": "bg-02",
+        "padding_top": 40,
+        "padding_bottom": 0,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "video_with_text_mzH4VN": {
+      "type": "video-with-text",
+      "blocks": {
+        "heading_qNMxVB": {
+          "type": "heading",
+          "settings": {
+            "heading": "Hear Our Story",
+            "heading_size": "h2"
+          }
+        },
+        "text_HpwEtG": {
+          "type": "text",
+          "settings": {
+            "description": "<p>Don’t you love it when things happen effortlessly? A Tuesday night that turns into something. We built JAX for nights like that. Present, easy, yours. It’s not a new drink. It’s a new way to drink. JAX elevates whatever you’re drinking without knocking you down.</p>",
+            "text_size": "std"
+          }
+        },
+        "button_HJmjR6": {
+          "type": "button",
+          "settings": {
+            "btn_txt": "Learn more",
+            "btn_link": "shopify://pages/our-story-1",
+            "button_colour": "primary-colour",
+            "btn_style": "outline",
+            "button_width_mobile": "default"
+          }
+        }
+      },
+      "block_order": [
+        "heading_qNMxVB",
+        "text_HpwEtG",
+        "button_HJmjR6"
+      ],
+      "name": "t:sections.video-with-text.presets.name",
+      "settings": {
+        "section_size": "flexible",
+        "card_spacing": 20,
+        "content_width": "page-width-full-grid",
+        "video_url": "shopify://files/videos/A New Way To Drink - 60 [Master].mp4",
+        "cover_image": "shopify://shop_images/video.png",
+        "image_ratio": "fit",
+        "autoplay": false,
+        "play_button_color": "primary-button-color",
+        "enable_video_looping": false,
+        "float_after_playback": false,
+        "secondary_image_scale": "small",
+        "dt_image_width": 50,
+        "video_alignment": "left",
+        "txt_alignment": "left",
+        "txt_vertical_alignment": "middle",
+        "txt_padding_top_mobile": 20,
+        "txt_padding_bottom_mobile": 20,
+        "txt_vertical_padding": 10,
+        "text_width": "medium",
+        "text_horizontal_position": "center",
+        "text_color": "fg-body",
+        "bg_color": "bg-02",
+        "top_padding": 70,
+        "bottom_padding": 80,
+        "border_vertical": false,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "rich_text_bFqqN6": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_KrUzH8": {
+          "type": "heading",
+          "settings": {
+            "heading": "FAQ",
+            "heading_size": "h0",
+            "alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 10
+          }
+        },
+        "text_JHNnG4": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Everything you need to know before your first JAX.</p>",
+            "text_size": "text-std",
+            "alignment": "center",
+            "text_indent": "noindent",
+            "padding_top": 0,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_KrUzH8",
+        "text_JHNnG4"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "content_width": "page-width",
+        "content_horizontal_position": "center",
+        "bg_image_darken": 0,
+        "bg_image_blur": 0,
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top": 80,
+        "padding_bottom": 0,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "collapsible_content_cHpXzB": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_J4T9Wb": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "What exactly is JAX?",
+            "content": "<p>JAX is a portable liquid THC drop you can add to any drink. One click of the device delivers a precise dose of hemp-derived delta-9 THC — tasteless, odorless, and fast-acting. Think of it as the social alternative to alcohol.</p>",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        },
+        "collapsible_row_CMYtrV": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "What does it feel like?",
+            "content": "<p>A relaxed, social buzz — similar to the feeling of a drink or two, without the alcohol. Most people feel it within 5–15 minutes.</p>",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        },
+        "collapsible_row_GEYCB8": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "Will it change the taste of my drink?",
+            "content": "<p>No. JAX is completely tasteless and odorless. Add it to water, juice, a mocktail, or anything else — you won't notice it's there.</p>",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        },
+        "collapsible_row_JxNExd": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "How is this different from an edible?",
+            "content": "<p>Edibles take 45–90 minutes and are famously hard to dose. JAX is built for social settings: faster onset, one-milligram precision, and it fits in your pocket.</p>",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        },
+        "heading_Wc3aCb": {
+          "type": "heading",
+          "settings": {
+            "group_heading": "Dosing"
+          }
+        },
+        "collapsible_row_3HWLeq": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "How much should I take?",
+            "content": "<p>Start with one shot (1mg THC). Wait 15 minutes before adding more. JAX is built around control — you can always add more.</p>",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        },
+        "collapsible_row_yrPAxi": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "Can I mix it with alcohol?",
+            "content": "<p>We don't recommend it. THC and alcohol together can intensify effects in unpredictable ways. JAX is designed as an alternative to alcohol, not a mixer with it.</p>",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        },
+        "collapsible_row_djFrjq": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "What if I take too much?",
+            "content": "<p>Find a comfortable place to sit, drink water, and don't panic — the feeling will pass. Start low next time. This is exactly why JAX is built around precise, one-shot dosing.</p>",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        },
+        "heading_pfhGbC": {
+          "type": "heading",
+          "settings": {
+            "group_heading": "Safety & Legality"
+          }
+        },
+        "collapsible_row_CHgrQa": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "Is JAX legal?",
+            "content": "<p>Yes. JAX uses hemp-derived delta-9 THC that complies with the federal legal limit under the 2018 Farm Bill. However, state laws vary — check your local regulations before purchasing.</p>",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        },
+        "collapsible_row_hUfWMA": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "Is it safe to drive after using JAX?",
+            "content": "<p>No. THC impairs your ability to drive. Treat it like alcohol — don't drive, operate machinery, or make important decisions after use.</p>",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        },
+        "collapsible_row_RKi6Lk": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "Who shouldn’t use JAX?",
+            "content": "<p>Anyone under 21, pregnant or nursing individuals, people on medications that may interact with cannabinoids, or anyone with a sensitivity to THC. When in doubt, consult a doctor before use.</p>",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        },
+        "heading_FyxkqU": {
+          "type": "heading",
+          "settings": {
+            "group_heading": "Product & Ordering"
+          }
+        },
+        "collapsible_row_Qy4AYC": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "Will it ship to my state?",
+            "content": "<p>We ship to 44 states. We don’t ship to AK, HI, ID, IA, ND, OH.&nbsp;</p>",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        },
+        "collapsible_row_n9dmMa": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "How long does a pod last?",
+            "content": "<p>The JAX Elixir holds 50 shots per pod. How long that lasts depends on how many shots per a drink, whether you share it and how often you use it.</p>",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        },
+        "collapsible_row_XGTzhQ": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "Are the pods refillable?",
+            "content": "<p>Pods are designed to be interchangeable across the JAX device. <a href=\"/products/jax-pods\" target=\"_blank\" title=\"JAX Elixir Pods\">Refill pods are sold separately.</a></p>",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        },
+        "collapsible_row_dBbgHL": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "Can I use JAX in public or at a bar?",
+            "content": "<p>JAX is discreet and portable by design. It's also TSA compliant.</p>",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_J4T9Wb",
+        "collapsible_row_CMYtrV",
+        "collapsible_row_GEYCB8",
+        "collapsible_row_JxNExd",
+        "heading_Wc3aCb",
+        "collapsible_row_3HWLeq",
+        "collapsible_row_yrPAxi",
+        "collapsible_row_djFrjq",
+        "heading_pfhGbC",
+        "collapsible_row_CHgrQa",
+        "collapsible_row_hUfWMA",
+        "collapsible_row_RKi6Lk",
+        "heading_FyxkqU",
+        "collapsible_row_Qy4AYC",
+        "collapsible_row_n9dmMa",
+        "collapsible_row_XGTzhQ",
+        "collapsible_row_dBbgHL"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "section_label": "",
+        "heading": "What It Is",
+        "heading_size": "h3",
+        "subheading": "",
+        "btn_enable": false,
+        "btn_txt": "",
+        "btn_url": "",
+        "btn_style": "solid",
+        "btn_color_scheme": "default",
+        "content_alignment": "left",
+        "content_width": "standard",
+        "column_layout": "1",
+        "accordion_title_font": "body",
+        "accordion_title_size": "std",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top": 0,
+        "padding_bottom": 80,
+        "top_border": false,
+        "bottom_border": true,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "newsletter_9M97tp": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_6MPKUw": {
+          "type": "heading",
+          "settings": {
+            "heading": "Join the JAX Community",
+            "heading_size": "h2"
+          }
+        },
+        "paragraph_Pjc9bb": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Sign up with us today to get 15% off.</p>"
+          }
+        },
+        "email_form_WDbtK9": {
+          "type": "email_form",
+          "settings": {
+            "form_width": "fixed",
+            "form_style": "outline",
+            "newsletter_submit_style": "icon"
+          }
+        }
+      },
+      "block_order": [
+        "heading_6MPKUw",
+        "paragraph_Pjc9bb",
+        "email_form_WDbtK9"
+      ],
+      "disabled": true,
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "alignment": "left",
+        "section_layout": "columns",
+        "text_color": "fg-04",
+        "bg_color": "bg-03",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    }
+  },
+  "order": [
+    "video_banner_WN7jfU",
+    "section_feature_icons_9Thz3w",
+    "rich_text_AKC4fz",
+    "video_with_text_rBJWJd",
+    "section_media_collage_dwhqpL",
+    "rich_text_dNhaTR",
+    "179062725714c0d7e7",
+    "17907226694065e486",
+    "featured_product_HxFVd6",
+    "1790634333f502063b",
+    "section_feature_icons_8f9yXt",
+    "newsletter_EWzRDp",
+    "section_feature_icons_kC4dUV",
+    "rich_text_pUEeqn",
+    "image_with_text_ngPEXn",
+    "rich_text_tnjkhx",
+    "178905854857836d74",
+    "rich_text_ipyzqB",
+    "17890771252962836c",
+    "multicolumn_C8XHfb",
+    "rich_text_gBky6F",
+    "video_with_text_mzH4VN",
+    "rich_text_bFqqN6",
+    "collapsible_content_cHpXzB",
+    "newsletter_9M97tp"
+  ]
+}

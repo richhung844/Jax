@@ -1,0 +1,89 @@
+{% doc %}
+  @prompt
+    Create a customizable Shopify Featured Product section based closely on the existing Luxe theme Featured Product layout.
+    
+    DESIGN:
+    - Maintain the Luxe theme's clean, spacious two-column layout and existing site typography.
+    - Product information on the left and product image on the right.
+    - Both the description/content area and image area should have a white background.
+    - Add a customizable green outer frame/background around the section, visible around the edges and between columns.
+    - Stack responsively on mobile.
+    
+    PRODUCT CONTENT:
+    Left column should include:
+    1. Product title
+    2. Dynamic price
+    3. Custom rich-text description
+    4. Optional Learn More link
+    5. Icon + text callouts
+    6. Add to Bag button
+    
+    ICON CALLOUTS:
+    Add up to 4 customizable icon callout blocks directly above the Add to Bag button.
+    
+    Each block should include:
+    - Custom uploaded icon or built-in icon
+    - Editable heading
+    - Editable supporting text
+    - Editable icon size/color
+    - Editable text colors
+    
+    Display callouts horizontally on desktop and responsively wrap/stack on mobile.
+    
+    IMAGE:
+    - Automatically pull the selected product image.
+    - Center the image with object-fit: contain and no cropping.
+    - Allow a custom image override and adjustable image scale.
+    
+    CUSTOMIZATION:
+    Include Theme Editor controls for:
+    - Product picker
+    - Custom title/description
+    - Learn More text + URL
+    - Green frame/background color
+    - Content background color
+    - Image background color
+    - Text colors
+    - Icon colors
+    - Badge text, icons, and colors
+    - Button background, text, border, and hover colors
+    - Section/column padding and spacing
+    - Image scale
+    - Content alignment
+    - Mobile column order
+    
+    TYPOGRAPHY:
+    All text must inherit the existing Luxe theme/site styling. Do not introduce new fonts. Product title, price, body copy, links, icon text, badges, and button text should match the site's existing typography, weights, spacing, and styling.
+    
+    FUNCTIONALITY:
+    - Price should use the selected product/variant.
+    - Add to Bag should add directly to cart.
+    - Preserve existing Luxe theme functionality where possible.
+    - Scope all CSS/JS to this section.
+    - Make all content, icons, badges, colors, and spacing editable in the Theme Editor.
+    
+    FINAL GOAL:
+    It should look like the existing Luxe Featured Product section—not a generic product card—with a green frame surrounding two white columns and a new editable icon/text benefit row above the Add to Bag button., Have the icon headings and supporting text sizes be editable, remove the 4th call out option and adjust the layout
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+{% assign featured_product = block.settings.product %}
+{% if featured_product != blank %}{% assign current_variant = featured_product.selected_or_first_available_variant %}{% endif %}
+{% style %}
+.ai-featured-product-{{ ai_gen_id }}{display:block;width:{{ block.settings.desktop_width_percent }}%;max-width:100%;background:{{ block.settings.frame_color }};padding:{{ block.settings.frame_thickness }}px}.ai-featured-product-{{ ai_gen_id }}__grid{display:grid;grid-template-columns:1fr 1fr;gap:{{ block.settings.column_gap }}px}.ai-featured-product-{{ ai_gen_id }}__content,.ai-featured-product-{{ ai_gen_id }}__media{background:#fff;min-width:0}.ai-featured-product-{{ ai_gen_id }}__content{padding:{{ block.settings.content_padding }}px;text-align:{{ block.settings.content_alignment }}}.ai-featured-product-{{ ai_gen_id }}__media{background:{{ block.settings.image_background }};display:flex;align-items:center;justify-content:center;padding:{{ block.settings.image_padding }}px;min-height:350px}.ai-featured-product-{{ ai_gen_id }}__image{width:{{ block.settings.image_scale }}%;height:auto;max-height:650px;object-fit:contain}.ai-featured-product-{{ ai_gen_id }}__title,.ai-featured-product-{{ ai_gen_id }}__price,.ai-featured-product-{{ ai_gen_id }}__description{color:{{ block.settings.text_color }}}.ai-featured-product-{{ ai_gen_id }}__benefits{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:{{ block.settings.callout_gap }}px;text-align:left;margin:22px 0}.ai-featured-product-{{ ai_gen_id }}__icon{display:block;width:{{ block.settings.icon_size }}px;height:{{ block.settings.icon_size }}px;color:{{ block.settings.icon_color }};margin-bottom:8px}.ai-featured-product-{{ ai_gen_id }}__icon img,.ai-featured-product-{{ ai_gen_id }}__icon svg{width:100%;height:100%;object-fit:contain;stroke:currentColor;fill:none}.ai-featured-product-{{ ai_gen_id }}__benefit-title{font-size:{{ block.settings.callout_heading_size }}px;color:{{ block.settings.callout_heading_color }};margin:0 0 4px}.ai-featured-product-{{ ai_gen_id }}__benefit-text{font-size:{{ block.settings.callout_text_size }}px;color:{{ block.settings.callout_text_color }};margin:0;line-height:1.45}.ai-featured-product-{{ ai_gen_id }}__button{width:100%;padding:14px;background:{{ block.settings.button_background }};color:{{ block.settings.button_text_color }};border:1px solid {{ block.settings.button_border_color }};font:inherit;cursor:pointer}.ai-featured-product-{{ ai_gen_id }}__button:hover{background:{{ block.settings.button_hover_background }};color:{{ block.settings.button_hover_text }}}.ai-featured-product-{{ ai_gen_id }}__badge{display:inline-block;padding:6px 10px;margin-bottom:12px;background:{{ block.settings.badge_background }};color:{{ block.settings.badge_text_color }}}.ai-featured-product-{{ ai_gen_id }}__learn{color:{{ block.settings.link_color }}}@media(max-width:749px){.ai-featured-product-{{ ai_gen_id }}__grid{grid-template-columns:1fr}.ai-featured-product-{{ ai_gen_id }}--image-first .ai-featured-product-{{ ai_gen_id }}__media{order:-1}.ai-featured-product-{{ ai_gen_id }}__benefits{grid-template-columns:repeat(2,minmax(0,1fr))}.ai-featured-product-{{ ai_gen_id }}__content{padding:{{ block.settings.content_padding | divided_by: 2 }}px}}
+{% endstyle %}
+<featured-product-{{ ai_gen_id }} class="ai-featured-product-{{ ai_gen_id }}{% if block.settings.mobile_order == 'image_first' %} ai-featured-product-{{ ai_gen_id }}--image-first{% endif %}" {{ block.shopify_attributes }}>
+{% if featured_product != blank %}<div class="ai-featured-product-{{ ai_gen_id }}__grid"><div class="ai-featured-product-{{ ai_gen_id }}__content">{% if block.settings.badge_text != blank %}<div class="ai-featured-product-{{ ai_gen_id }}__badge">{{ block.settings.badge_text | escape }}</div>{% endif %}<h2 class="ai-featured-product-{{ ai_gen_id }}__title">{{ block.settings.custom_title | default: featured_product.title | escape }}</h2><div class="ai-featured-product-{{ ai_gen_id }}__price">{{ current_variant.price | money }}</div>{% if block.settings.description != blank %}<div class="ai-featured-product-{{ ai_gen_id }}__description">{{ block.settings.description }}</div>{% else %}<div class="ai-featured-product-{{ ai_gen_id }}__description">{{ featured_product.description }}</div>{% endif %}{% if block.settings.learn_more_text != blank and block.settings.learn_more_url != blank %}<a class="ai-featured-product-{{ ai_gen_id }}__learn" href="{{ block.settings.learn_more_url }}">{{ block.settings.learn_more_text | escape }}</a>{% endif %}<div class="ai-featured-product-{{ ai_gen_id }}__benefits">
+{% for i in (1..3) %}{% liquid
+assign heading_key = 'callout_' | append: i | append: '_heading'
+assign text_key = 'callout_' | append: i | append: '_text'
+assign icon_key = 'callout_' | append: i | append: '_icon'
+assign image_key = 'callout_' | append: i | append: '_image'
+assign heading = block.settings[heading_key]
+assign callout_text = block.settings[text_key]
+assign callout_icon = block.settings[icon_key]
+assign callout_image = block.settings[image_key]
+%}{% if heading != blank or callout_text != blank or callout_image != blank %}<div><span class="ai-featured-product-{{ ai_gen_id }}__icon" aria-hidden="true">{% if callout_image != blank %}<img src="{{ callout_image | image_url: width: 120 }}" alt="" loading="lazy">{% elsif callout_icon == 'leaf' %}<svg viewBox="0 0 24 24"><path d="M20 4c-8 0-14 3-14 10a6 6 0 0 0 6 6c7 0 8-8 8-16Z"/><path d="M4 21c3-6 7-9 12-12"/></svg>{% elsif callout_icon == 'drop' %}<svg viewBox="0 0 24 24"><path d="M12 3s7 8 7 13a7 7 0 0 1-14 0c0-5 7-13 7-13Z"/></svg>{% elsif callout_icon == 'spark' %}<svg viewBox="0 0 24 24"><path d="m12 3 2 7 7 2-7 2-2 7-2-7-7-2 7-2Z"/></svg>{% elsif callout_icon == 'check' %}<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>{% endif %}</span>{% if heading != blank %}<h3 class="ai-featured-product-{{ ai_gen_id }}__benefit-title">{{ heading | escape }}</h3>{% endif %}{% if callout_text != blank %}<p class="ai-featured-product-{{ ai_gen_id }}__benefit-text">{{ callout_text | escape }}</p>{% endif %}</div>{% endif %}{% endfor %}</div>
+{% form 'product', featured_product %}<input type="hidden" name="id" value="{{ current_variant.id }}"><input type="hidden" name="quantity" value="1"><button class="ai-featured-product-{{ ai_gen_id }}__button" type="submit" name="add" {% unless current_variant.available %}disabled{% endunless %}>{% if current_variant.available %}{{ block.settings.button_label | escape }}{% else %}Sold out{% endif %}</button>{% endform %}</div><div class="ai-featured-product-{{ ai_gen_id }}__media">{% assign display_image = block.settings.image_override | default: featured_product.featured_image %}{% if display_image != blank %}<img class="ai-featured-product-{{ ai_gen_id }}__image" src="{{ display_image | image_url: width: 1500 }}" alt="{{ display_image.alt | default: featured_product.title | escape }}" loading="lazy">{% else %}<div class="ai-featured-product-{{ ai_gen_id }}__placeholder">{{ 'product-1' | placeholder_svg_tag }}<p>Add a product image.</p></div>{% endif %}</div></div>{% else %}<p>Choose a product in block settings.</p>{% endif %}</featured-product-{{ ai_gen_id }}>
+{% schema %}
+{"name":"Featured product luxe","settings":[{"type":"product","id":"product","label":"Product"},{"type":"text","id":"custom_title","label":"Custom title"},{"type":"richtext","id":"description","label":"Custom description","default":"<p>Discover the details that make this product special.</p>"},{"type":"text","id":"learn_more_text","label":"Learn more text","default":"Learn more"},{"type":"url","id":"learn_more_url","label":"Learn more link"},{"type":"text","id":"button_label","label":"Button label","default":"Add to bag"},{"type":"text","id":"badge_text","label":"Badge text"},{"type":"header","content":"Callout one"},{"type":"image_picker","id":"callout_1_image","label":"Uploaded icon"},{"type":"select","id":"callout_1_icon","label":"Built-in icon","options":[{"value":"none","label":"None"},{"value":"leaf","label":"Leaf"},{"value":"drop","label":"Drop"},{"value":"spark","label":"Spark"},{"value":"check","label":"Check"}],"default":"leaf"},{"type":"text","id":"callout_1_heading","label":"Heading"},{"type":"text","id":"callout_1_text","label":"Supporting text"},{"type":"header","content":"Callout two"},{"type":"image_picker","id":"callout_2_image","label":"Uploaded icon"},{"type":"select","id":"callout_2_icon","label":"Built-in icon","options":[{"value":"none","label":"None"},{"value":"leaf","label":"Leaf"},{"value":"drop","label":"Drop"},{"value":"spark","label":"Spark"},{"value":"check","label":"Check"}],"default":"drop"},{"type":"text","id":"callout_2_heading","label":"Heading"},{"type":"text","id":"callout_2_text","label":"Supporting text"},{"type":"header","content":"Callout three"},{"type":"image_picker","id":"callout_3_image","label":"Uploaded icon"},{"type":"select","id":"callout_3_icon","label":"Built-in icon","options":[{"value":"none","label":"None"},{"value":"leaf","label":"Leaf"},{"value":"drop","label":"Drop"},{"value":"spark","label":"Spark"},{"value":"check","label":"Check"}],"default":"spark"},{"type":"text","id":"callout_3_heading","label":"Heading"},{"type":"text","id":"callout_3_text","label":"Supporting text"},{"type":"header","content":"Callout typography"},{"type":"range","id":"callout_heading_size","label":"Heading size","min":12,"max":24,"step":1,"unit":"px","default":15},{"type":"range","id":"callout_text_size","label":"Supporting text size","min":12,"max":22,"step":1,"unit":"px","default":14},{"type":"header","content":"Layout"},{"type":"range","id":"desktop_width_percent","label":"Desktop width","min":50,"max":100,"step":5,"unit":"%","default":100},{"type":"range","id":"frame_thickness","label":"Frame thickness","min":8,"max":48,"step":4,"unit":"px","default":20},{"type":"range","id":"content_padding","label":"Content padding","min":16,"max":80,"step":4,"unit":"px","default":48},{"type":"range","id":"image_padding","label":"Image padding","min":8,"max":64,"step":4,"unit":"px","default":24},{"type":"range","id":"column_gap","label":"Column gap","min":0,"max":40,"step":4,"unit":"px","default":16},{"type":"range","id":"callout_gap","label":"Callout gap","min":4,"max":28,"step":4,"unit":"px","default":12},{"type":"range","id":"image_scale","label":"Image scale","min":40,"max":100,"step":5,"unit":"%","default":85},{"type":"range","id":"icon_size","label":"Icon size","min":16,"max":48,"step":4,"unit":"px","default":28},{"type":"select","id":"content_alignment","label":"Content alignment","options":[{"value":"left","label":"Left"},{"value":"center","label":"Center"}],"default":"left"},{"type":"select","id":"mobile_order","label":"Mobile column order","options":[{"value":"content_first","label":"Content first"},{"value":"image_first","label":"Image first"}],"default":"content_first"},{"type":"image_picker","id":"image_override","label":"Custom image override"},{"type":"header","content":"Colors"},{"type":"color","id":"frame_color","label":"Frame background","default":"#176B3A"},{"type":"color","id":"image_background","label":"Image background","default":"#FFFFFF"},{"type":"color","id":"text_color","label":"Text","default":"#171717"},{"type":"color","id":"link_color","label":"Link","default":"#176B3A"},{"type":"color","id":"icon_color","label":"Icon","default":"#176B3A"},{"type":"color","id":"callout_heading_color","label":"Callout heading","default":"#171717"},{"type":"color","id":"callout_text_color","label":"Callout text","default":"#444444"},{"type":"color","id":"badge_background","label":"Badge background","default":"#176B3A"},{"type":"color","id":"badge_text_color","label":"Badge text","default":"#FFFFFF"},{"type":"color","id":"button_background","label":"Button background","default":"#176B3A"},{"type":"color","id":"button_text_color","label":"Button text","default":"#FFFFFF"},{"type":"color","id":"button_border_color","label":"Button border","default":"#176B3A"},{"type":"color","id":"button_hover_background","label":"Button hover background","default":"#0F4A28"},{"type":"color","id":"button_hover_text","label":"Button hover text","default":"#FFFFFF"}],"presets":[{"name":"Featured product luxe"}],"tag":null,"class":"featured-product-luxe"}
+{% endschema %}

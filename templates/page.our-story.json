@@ -1,0 +1,211 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "content_width": "page-width-medium",
+        "hdr_alignment": "center",
+        "heading_hide": true,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "rich_text_LRifag": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_KjM3XQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "our story",
+            "heading_size": "h0",
+            "alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 20
+          }
+        },
+        "text_KHCJDX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>JAX started with a simple idea: drinking should<em> </em><strong>feel</strong> better.</p>",
+            "text_size": "text-large",
+            "alignment": "center",
+            "text_indent": "noindent",
+            "padding_top": 0,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_KjM3XQ",
+        "text_KHCJDX"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "content_width": "page-width",
+        "content_horizontal_position": "center",
+        "bg_image": "shopify://shop_images/Suspended_Droplet_and_Rippling_Water.png",
+        "bg_image_darken": 40,
+        "bg_image_blur": 0,
+        "text_color": "fg-04",
+        "bg_color": "bg-03",
+        "padding_top": 80,
+        "padding_bottom": 20,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "image_with_text_WXi6Rp": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_xtzrEG": {
+          "type": "heading",
+          "settings": {
+            "heading": "What we felt was missing",
+            "heading_size": "h1"
+          }
+        },
+        "text_WeWJ9L": {
+          "type": "text",
+          "settings": {
+            "description": "<p>We loved the social side of alcohol, but hated the downsides — the hangovers, the lack of control, the feeling of overdoing it without meaning to. At the same time, cannabis felt promising, but the usual options didn’t fit modern social life.</p><h4>Smoking wasn’t it.</h4><h4>Edibles were unpredictable.</h4><h4>Drinks were bulky and sugary.</h4>",
+            "text_size": "std"
+          }
+        }
+      },
+      "block_order": [
+        "heading_xtzrEG",
+        "text_WeWJ9L"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "section_size": "flexible",
+        "content_width": "page-width-full-grid",
+        "image_alignment": "right",
+        "dt_image_width": 50,
+        "card_spacing": 20,
+        "image": "shopify://shop_images/jax-lifestyle.png",
+        "image_ratio": "square",
+        "secondary_image_scale": "small",
+        "txt_alignment": "left",
+        "txt_vertical_alignment": "middle",
+        "txt_padding_top_mobile": 20,
+        "txt_padding_bottom_mobile": 20,
+        "txt_vertical_padding": 0,
+        "text_width": "medium",
+        "text_horizontal_position": "center",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "top_padding": 30,
+        "bottom_padding": 0,
+        "border_vertical": false,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "image_with_text_bHFPwQ": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_E6hnzx": {
+          "type": "heading",
+          "settings": {
+            "heading": "A Smarter Ritual",
+            "heading_size": "h1"
+          }
+        },
+        "text_WekBA7": {
+          "type": "text",
+          "settings": {
+            "description": "<p>JAX is a smarter way to enhance any drink — whether that’s sparkling water, a mocktail, or your favorite cocktail. It’s about choice, control, and intention. Precise dosing. No calories. No smoke. Just a better ritual that fits how people actually live today.</p><p>This isn’t about getting messed up. It’s about elevating moments — dinners, nights out, nights in — on your own terms.</p><h4>JAX is here to reimagine how we drink, socialize, and unwind. One drop at a time.</h4>",
+            "text_size": "std"
+          }
+        }
+      },
+      "block_order": [
+        "heading_E6hnzx",
+        "text_WekBA7"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "section_size": "flexible",
+        "content_width": "page-width-full-grid",
+        "image_alignment": "left",
+        "dt_image_width": 50,
+        "card_spacing": 20,
+        "image": "shopify://shop_images/summer-cocktails-cheers.jpg",
+        "image_ratio": "square",
+        "secondary_image_scale": "small",
+        "txt_alignment": "left",
+        "txt_vertical_alignment": "middle",
+        "txt_padding_top_mobile": 20,
+        "txt_padding_bottom_mobile": 20,
+        "txt_vertical_padding": 0,
+        "text_width": "medium",
+        "text_horizontal_position": "center",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "top_padding": 0,
+        "bottom_padding": 30,
+        "border_vertical": false,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "rich_text_Xja4zm": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Y68wPb": {
+          "type": "heading",
+          "settings": {
+            "heading": "JAX is here to reimagine how we drink, socialize, and unwind. <br> One drop at a time.",
+            "heading_size": "h1",
+            "alignment": "center",
+            "padding_top": 20,
+            "padding_bottom": 20
+          }
+        }
+      },
+      "block_order": [
+        "heading_Y68wPb"
+      ],
+      "disabled": true,
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "content_width": "page-width-medium",
+        "content_horizontal_position": "center",
+        "bg_image_darken": 0,
+        "bg_image_blur": 0,
+        "text_color": "fg-04",
+        "bg_color": "bg-03",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_LRifag",
+    "image_with_text_WXi6Rp",
+    "image_with_text_bHFPwQ",
+    "rich_text_Xja4zm"
+  ]
+}

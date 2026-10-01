@@ -1,0 +1,138 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "content_width": "page-width-narrow",
+        "hdr_alignment": "center",
+        "heading_hide": false,
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_aUz6AA": {
+      "type": "rich-text",
+      "blocks": {
+        "caption_zgXaAJ": {
+          "type": "caption",
+          "settings": {
+            "caption": "",
+            "alignment": "left",
+            "opacity": 100
+          }
+        },
+        "heading_4UAwFA": {
+          "type": "heading",
+          "settings": {
+            "heading": "We’re here to help and want to make sure your message gets to the right place. Please reach out using the email below that best fits your question:",
+            "heading_size": "h1",
+            "alignment": "center"
+          }
+        },
+        "text_qiHJeT": {
+          "type": "text",
+          "settings": {
+            "text": "<h1></h1><h1><strong>📦 Orders, Shipping & Support</strong></h1><h1></h1><h1>For order status, shipping updates, delivery issues, returns, refunds, or product support:<br/><strong>support@jaxdrinx.com</strong></h1>",
+            "text_size": "text-std",
+            "alignment": "center",
+            "text_indent": "noindent"
+          }
+        },
+        "text_FEFUgV": {
+          "type": "text",
+          "settings": {
+            "text": "<h1><strong>📣 Marketing & Partnerships</strong></h1><h1></h1><h1>For press, partnerships, collaborations, influencer inquiries, and all marketing-related questions:<br/><strong>marketing@jaxdrinx.com</strong></h1>",
+            "text_size": "text-std",
+            "alignment": "center",
+            "text_indent": "noindent"
+          }
+        },
+        "text_e3kPzB": {
+          "type": "text",
+          "settings": {
+            "text": "<h1><strong>🧾 All Other Inquiries</strong></h1><h1></h1><h1>For general questions, administrative matters, or anything else not covered above:<strong>admin@jaxdrinx.com</strong></h1>",
+            "text_size": "text-std",
+            "alignment": "center",
+            "text_indent": "noindent"
+          }
+        }
+      },
+      "block_order": [
+        "caption_zgXaAJ",
+        "heading_4UAwFA",
+        "text_qiHJeT",
+        "text_FEFUgV",
+        "text_e3kPzB"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "content_width": "page-width",
+        "content_horizontal_position": "center",
+        "bg_image_darken": 0,
+        "bg_image_blur": 0,
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top": 0,
+        "padding_bottom": 10,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "rich_text_irUGFK": {
+      "type": "rich-text",
+      "blocks": {
+        "caption_FbwDH3": {
+          "type": "caption",
+          "settings": {
+            "caption": "",
+            "alignment": "left",
+            "opacity": 100
+          }
+        },
+        "heading_pemPyp": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h2",
+            "alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "caption_FbwDH3",
+        "heading_pemPyp"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "content_width": "page-width",
+        "content_horizontal_position": "center",
+        "bg_image_darken": 0,
+        "bg_image_blur": 0,
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top": 10,
+        "padding_bottom": 10,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_aUz6AA",
+    "rich_text_irUGFK"
+  ]
+}

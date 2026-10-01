@@ -1,0 +1,377 @@
+{% doc %}
+  @prompt
+    Create a customizable Shopify Featured Collection section with responsive product cards and variant selection.
+    
+    DEFAULT CARD LAYOUT:
+    1. Product title above image
+    2. Product image
+    3. Price below image
+    4. Editable custom description
+    5. Variant selector
+    6. Quick Add button
+    
+    FEATURED COLLECTION SETTINGS:
+    - Collection picker
+    - Heading/description
+    - Products shown
+    - Desktop/mobile columns
+    - Card spacing and section padding
+    - Optional View All button
+    - Section background color picker
+    
+    PRODUCT CARDS:
+    - Product title above image
+    - Product image
+    - Dynamic price below image
+    - Editable custom description for each product card
+    - Variant selector
+    - Quick Add
+    - Show/hide controls
+    
+    Allow custom descriptions to be individually edited for each product card in the Theme Editor.
+    
+    CARD COLOR SETTINGS:
+    Add Theme Editor color pickers for:
+    - Section background color
+    - Product card background color
+    - Product title color
+    - Price color
+    - Description text color
+    - Card border color
+    - Variant button background/text colors
+    - Selected variant background/text colors
+    - Quick Add button background/text colors
+    
+    Colors must apply to the entire section/card backgrounds without requiring custom CSS.
+    
+    VARIANTS:
+    Display variants as buttons, pills, swatches, or dropdowns. Clearly show selected and sold-out variants.
+    
+    When a variant is selected, dynamically update:
+    - Price/compare-at price
+    - Variant image
+    - Availability
+    - Selected variant ID
+    - Quick Add button
+    
+    Quick Add must add the selected variant. Do not show duplicate prices.
+    
+    DESIGN SETTINGS:
+    Include controls for image ratio/fit, card padding, spacing, border/radius, typography sizing, variant style, button style, and text alignment.
+    
+    MOBILE:
+    Fully responsive with mobile column and spacing controls. Variant selectors must not overflow.
+    
+    Use Shopify Liquid, CSS, and JavaScript compatible with Online Store 2.0. Use dynamic Shopify product/variant data with no hard-coded products or variants. Each card must function independently., VARIANTS:
+    Always display product variants as individual clickable buttons. Do NOT use dropdowns or select menus.
+    
+    Clearly show the selected and sold-out variants. Allow controls for button size, spacing, border, radius, background and text colors.
+    
+    When a variant button is selected, dynamically update:
+    - Price/compare-at price
+    - Variant image
+    - Availability
+    - Selected variant ID
+    - Quick Add button
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-featured-collection-{{ ai_gen_id }} { display:block; width:100%; box-sizing:border-box; padding:{{ block.settings.padding_vertical }}px {{ block.settings.padding_horizontal }}px; background:{{ block.settings.section_bg }}; }
+  .ai-featured-collection-{{ ai_gen_id }} *, .ai-featured-collection-{{ ai_gen_id }} *::before, .ai-featured-collection-{{ ai_gen_id }} *::after { box-sizing:border-box; }
+  .ai-featured-collection-{{ ai_gen_id }} .ai-fc-inner-{{ ai_gen_id }} { width:{{ block.settings.desktop_width_percent }}%; max-width:100%; margin:0 auto; }
+  .ai-featured-collection-{{ ai_gen_id }} .ai-fc-header-{{ ai_gen_id }} { margin:0 0 24px; text-align:{{ block.settings.text_alignment }}; }
+  .ai-featured-collection-{{ ai_gen_id }} .ai-fc-heading-{{ ai_gen_id }} { margin:0 0 8px; color:{{ block.settings.title_color }}; font-size:{{ block.settings.heading_size }}px; }
+  .ai-featured-collection-{{ ai_gen_id }} .ai-fc-intro-{{ ai_gen_id }} { color:{{ block.settings.description_color }}; }
+  .ai-featured-collection-{{ ai_gen_id }} .ai-fc-intro-{{ ai_gen_id }} p,.ai-featured-collection-{{ ai_gen_id }} .ai-fc-custom-desc-{{ ai_gen_id }} p { margin:0; }
+  .ai-featured-collection-{{ ai_gen_id }} .ai-fc-grid-{{ ai_gen_id }} { display:grid; grid-template-columns:repeat({{ block.settings.columns_desktop }},minmax(0,1fr)); gap:{{ block.settings.card_gap }}px; }
+  .ai-featured-collection-{{ ai_gen_id }} .ai-fc-card-{{ ai_gen_id }} { min-width:0; padding:{{ block.settings.card_padding }}px; background:{{ block.settings.card_bg }}; border:{{ block.settings.border_width }}px solid {{ block.settings.border_color }}; border-radius:{{ block.settings.card_radius }}px; text-align:{{ block.settings.text_alignment }}; }
+.ai-featured-collection-{{ ai_gen_id }} .ai-fc-title-{{ ai_gen_id }} {
+  display: block;
+  margin: 0 0 10px;
+  color: {{ block.settings.title_color }};
+  font-family: var(--font-heading-family);
+  font-style: var(--font-heading-style);
+  font-weight: var(--font-heading-weight);
+  font-size: {{ block.settings.card_title_size }}px;
+  line-height: 1.1;
+  text-decoration: none;
+}  .ai-featured-collection-{{ ai_gen_id }} .ai-fc-media-{{ ai_gen_id }} { display:block; width:100%; aspect-ratio:{{ block.settings.image_ratio }}; overflow:hidden; background:#f4f4f4; }
+  .ai-featured-collection-{{ ai_gen_id }} .ai-fc-media-{{ ai_gen_id }} img,.ai-featured-collection-{{ ai_gen_id }} .ai-fc-media-{{ ai_gen_id }} svg { display:block; width:100%; height:100%; object-fit:{{ block.settings.image_fit }}; }
+  .ai-featured-collection-{{ ai_gen_id }} .ai-fc-price-{{ ai_gen_id }} { display:flex; justify-content:{% if block.settings.text_alignment == 'center' %}center{% elsif block.settings.text_alignment == 'right' %}flex-end{% else %}flex-start{% endif %}; gap:8px; margin:12px 0; color:{{ block.settings.price_color }}; font-weight:600; }
+  .ai-featured-collection-{{ ai_gen_id }} .ai-fc-compare-{{ ai_gen_id }} { text-decoration:line-through; opacity:.75; }
+  .ai-featured-collection-{{ ai_gen_id }} .ai-fc-custom-desc-{{ ai_gen_id }} { margin:0 0 14px; color:{{ block.settings.description_color }}; }
+  .ai-featured-collection-{{ ai_gen_id }} .ai-fc-variants-{{ ai_gen_id }} { display:flex; flex-wrap:wrap; justify-content:{% if block.settings.text_alignment == 'center' %}center{% elsif block.settings.text_alignment == 'right' %}flex-end{% else %}flex-start{% endif %}; gap:{{ block.settings.variant_gap }}px; width:100%; margin:0; padding:0; }
+  .ai-featured-collection-{{ ai_gen_id }} .ai-fc-variant-{{ ai_gen_id }} { min-width:{{ block.settings.variant_min_width }}px; min-height:{{ block.settings.variant_height }}px; max-width:100%; padding:{{ block.settings.variant_padding }}px; border:{{ block.settings.variant_border_width }}px solid {{ block.settings.variant_border_color }}; border-radius:{{ block.settings.variant_radius }}px; background:{{ block.settings.variant_bg }}; color:{{ block.settings.variant_text }}; font:inherit; font-size:{{ block.settings.variant_font_size }}px; line-height:1.2; cursor:pointer; overflow-wrap:anywhere; }
+  .ai-featured-collection-{{ ai_gen_id }} .ai-fc-variant-{{ ai_gen_id }}[aria-pressed="true"] { background:{{ block.settings.selected_variant_bg }}; color:{{ block.settings.selected_variant_text }}; border-color:{{ block.settings.selected_variant_border }}; }
+  .ai-featured-collection-{{ ai_gen_id }} .ai-fc-variant-{{ ai_gen_id }}[disabled] { cursor:not-allowed; opacity:.55; text-decoration:line-through; }
+  .ai-featured-collection-{{ ai_gen_id }} .ai-fc-variant-{{ ai_gen_id }}:focus-visible,.ai-featured-collection-{{ ai_gen_id }} .ai-fc-button-{{ ai_gen_id }}:focus-visible,.ai-featured-collection-{{ ai_gen_id }} .ai-fc-viewall-{{ ai_gen_id }}:focus-visible { outline:2px solid currentColor; outline-offset:3px; }
+  .ai-featured-collection-{{ ai_gen_id }} .ai-fc-button-{{ ai_gen_id }},.ai-featured-collection-{{ ai_gen_id }} .ai-fc-viewall-{{ ai_gen_id }} { display:inline-flex; justify-content:center; align-items:center; width:100%; min-height:44px; margin-top:10px; padding:10px 14px; border:0; border-radius:{{ block.settings.button_radius }}px; background:{{ block.settings.button_bg }}; color:{{ block.settings.button_text }}; font:inherit; text-align:center; text-decoration:none; cursor:pointer; }
+  .ai-featured-collection-{{ ai_gen_id }} .ai-fc-button-{{ ai_gen_id }}:disabled { opacity:.55; cursor:not-allowed; }
+  .ai-featured-collection-{{ ai_gen_id }} .ai-fc-footer-{{ ai_gen_id }} { margin-top:22px; text-align:center; }
+  .ai-featured-collection-{{ ai_gen_id }} .ai-fc-viewall-{{ ai_gen_id }} { width:auto; }
+  .ai-featured-collection-{{ ai_gen_id }} .ai-fc-status-{{ ai_gen_id }} { min-height:1.3em; margin:6px 0 0; color:{{ block.settings.description_color }}; font-size:13px; }
+@media (max-width: 749px) {
+
+  .ai-featured-collection-{{ ai_gen_id }} {
+    padding:
+      {{ block.settings.mobile_padding }}px
+      {{ block.settings.mobile_side_padding }}px;
+  }
+
+  .ai-featured-collection-{{ ai_gen_id }} .ai-fc-card-{{ ai_gen_id }} {
+    padding: {{ block.settings.mobile_card_padding }}px;
+  }
+
+  .ai-featured-collection-{{ ai_gen_id }} .ai-fc-media-{{ ai_gen_id }} {
+    aspect-ratio: {{ block.settings.image_ratio_mobile }};
+  }
+
+  {% if block.settings.mobile_carousel %}
+
+    /* MOBILE CAROUSEL */
+    .ai-featured-collection-{{ ai_gen_id }} .ai-fc-grid-{{ ai_gen_id }} {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: {{ block.settings.mobile_gap }}px;
+
+      width: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+
+      scrollbar-width: none;
+    }
+
+    .ai-featured-collection-{{ ai_gen_id }} .ai-fc-grid-{{ ai_gen_id }}::-webkit-scrollbar {
+      display: none;
+    }
+
+    .ai-featured-collection-{{ ai_gen_id }} .ai-fc-card-{{ ai_gen_id }} {
+      flex: 0 0 {{ block.settings.mobile_carousel_width }}%;
+      width: {{ block.settings.mobile_carousel_width }}%;
+      max-width: {{ block.settings.mobile_carousel_width }}%;
+      scroll-snap-align: start;
+    }
+
+  {% else %}
+
+    /* STANDARD MOBILE GRID */
+    .ai-featured-collection-{{ ai_gen_id }} .ai-fc-grid-{{ ai_gen_id }} {
+      display: grid;
+      grid-template-columns:
+        repeat({{ block.settings.columns_mobile }}, minmax(0, 1fr));
+      gap: {{ block.settings.mobile_gap }}px;
+    }
+
+  {% endif %}
+   /* Equal-height cards */
+.ai-featured-collection-{{ ai_gen_id }} .ai-fc-card-{{ ai_gen_id }} {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Heading font for product titles */
+.ai-featured-collection-{{ ai_gen_id }} .ai-fc-title-{{ ai_gen_id }} {
+  font-family: var(--font-heading-family);
+  font-style: var(--font-heading-style);
+  font-weight: var(--font-heading-weight);
+}
+
+/* Let description fill remaining vertical space */
+.ai-featured-collection-{{ ai_gen_id }} .ai-fc-custom-desc-{{ ai_gen_id }} {
+  flex-grow: 1;
+}
+
+/* Reserve the same variant-selector space on ALL cards */
+.ai-featured-collection-{{ ai_gen_id }} .ai-fc-custom-desc-{{ ai_gen_id }}::after {
+  content: "";
+  display: block;
+  height: calc({{ block.settings.variant_height }}px + 10px);
+}
+
+/* Products that actually have variants don't need
+   the artificial spacer */
+.ai-featured-collection-{{ ai_gen_id }}
+.ai-fc-custom-desc-{{ ai_gen_id }}:has(+ .ai-fc-variants-{{ ai_gen_id }})::after {
+  display: none;
+}
+
+/* Consistent spacing above Add to Bag */
+.ai-featured-collection-{{ ai_gen_id }} .ai-fc-button-{{ ai_gen_id }} {
+  margin-top: 10px;
+  flex-shrink: 0;
+}
+
+/* Status shouldn't create extra visible spacing */
+.ai-featured-collection-{{ ai_gen_id }} .ai-fc-status-{{ ai_gen_id }} {
+  min-height: 0;
+  height: 0;
+  margin: 0;
+  overflow: hidden;
+}
+{% endstyle %}
+
+<featured-collection-{{ ai_gen_id }} class="ai-featured-collection-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-fc-inner-{{ ai_gen_id }}">
+    {% if block.settings.heading != blank or block.settings.description != blank %}<div class="ai-fc-header-{{ ai_gen_id }}">{% if block.settings.heading != blank %}<h2 class="ai-fc-heading-{{ ai_gen_id }}">{{ block.settings.heading | escape }}</h2>{% endif %}{% if block.settings.description != blank %}<div class="ai-fc-intro-{{ ai_gen_id }}">{{ block.settings.description }}</div>{% endif %}</div>{% endif %}
+    {% if block.settings.collection != blank %}
+      <div class="ai-fc-grid-{{ ai_gen_id }}">
+        {% for product in block.settings.collection.products limit: block.settings.products_to_show %}
+          {% liquid
+            assign card_description_key = 'card_description_' | append: forloop.index
+            assign card_description = block.settings[card_description_key]
+            assign current_variant = product.selected_or_first_available_variant | default: product.variants.first
+          %}
+          <article class="ai-fc-card-{{ ai_gen_id }}" data-product-card>
+            {% if block.settings.show_title %}<a class="ai-fc-title-{{ ai_gen_id }}" href="{{ product.url }}">{{ product.title | escape }}</a>{% endif %}
+            <a class="ai-fc-media-{{ ai_gen_id }}" href="{{ product.url }}" aria-label="{{ product.title | escape }}">
+              {% if product.featured_image %}<img data-product-image src="{{ current_variant.featured_image | default: product.featured_image | image_url: width: 1000 }}" alt="{{ product.featured_image.alt | default: product.title | escape }}" loading="lazy" width="{{ product.featured_image.width }}" height="{{ product.featured_image.height }}">{% else %}<div>{{ 'product-apparel-1' | placeholder_svg_tag }}</div>{% endif %}
+            </a>
+            {% if block.settings.show_price %}<div class="ai-fc-price-{{ ai_gen_id }}"><span data-current-price>{{ current_variant.price | money }}</span><span class="ai-fc-compare-{{ ai_gen_id }}" data-compare-price {% unless current_variant.compare_at_price > current_variant.price %}hidden{% endunless %}>{% if current_variant.compare_at_price > current_variant.price %}{{ current_variant.compare_at_price | money }}{% endif %}</span></div>{% endif %}
+            {% if block.settings.show_description and card_description != blank %}<div class="ai-fc-custom-desc-{{ ai_gen_id }}">{{ card_description }}</div>{% endif %}
+            {% if block.settings.show_variant_selector and product.variants.size > 1 %}
+              <div class="ai-fc-variants-{{ ai_gen_id }}" role="group" aria-label="Choose a variant for {{ product.title | escape }}">
+                {% for variant in product.variants %}<button type="button" class="ai-fc-variant-{{ ai_gen_id }}" data-variant-button data-id="{{ variant.id }}" data-price="{{ variant.price }}" data-compare="{{ variant.compare_at_price | default: 0 }}" data-available="{{ variant.available }}" data-image="{% if variant.featured_image %}{{ variant.featured_image | image_url: width: 1000 }}{% elsif product.featured_image %}{{ product.featured_image | image_url: width: 1000 }}{% endif %}" aria-pressed="{% if variant.id == current_variant.id %}true{% else %}false{% endif %}" aria-label="{{ variant.title | escape }}{% unless variant.available %}, sold out{% endunless %}" {% unless variant.available %}disabled{% endunless %}>{{ variant.title | escape }}{% unless variant.available %}<span class="ai-fc-soldout-{{ ai_gen_id }}"> — Sold out</span>{% endunless %}</button>{% endfor %}
+              </div>
+            {% else %}<input type="hidden" data-single-variant value="{{ current_variant.id }}" data-available="{{ current_variant.available }}">{% endif %}
+            {% if block.settings.show_quick_add %}<button type="button" class="ai-fc-button-{{ ai_gen_id }}" data-quick-add {% unless current_variant.available %}disabled{% endunless %}>{% if current_variant.available %}{{ block.settings.quick_add_label | escape }}{% else %}{{ block.settings.sold_out_label | escape }}{% endif %}</button><p class="ai-fc-status-{{ ai_gen_id }}" data-status aria-live="polite"></p>{% endif %}
+          </article>
+        {% else %}<p>No products found in this collection.</p>{% endfor %}
+      </div>
+      {% if block.settings.show_view_all and block.settings.collection.url != blank %}<div class="ai-fc-footer-{{ ai_gen_id }}"><a class="ai-fc-viewall-{{ ai_gen_id }}" href="{{ block.settings.collection.url }}">{{ block.settings.view_all_label | escape }}</a></div>{% endif %}
+    {% else %}<p>Select a collection to display products.</p>{% endif %}
+  </div>
+</featured-collection-{{ ai_gen_id }}>
+
+<script>
+(function(){
+  const tagName='featured-collection-{{ ai_gen_id }}';
+  if(customElements.get(tagName)) return;
+  class FeaturedCollection{{ ai_gen_id }} extends HTMLElement {
+    connectedCallback(){
+      this.querySelectorAll('[data-product-card]').forEach((card)=>{
+        card.dataset.variantId=card.querySelector('[data-variant-button][aria-pressed="true"]')?.dataset.id || card.querySelector('[data-single-variant]')?.value || '';
+        card.querySelectorAll('[data-variant-button]').forEach((button)=>button.addEventListener('click',()=>this.selectVariant(card,button)));
+        const add=card.querySelector('[data-quick-add]');
+        if(add) add.addEventListener('click',()=>this.addToCart(card,add));
+      });
+    }
+    formatMoney(cents,format){
+      const amount=(cents/100).toFixed(2), noDecimals=String(Math.round(cents/100)), comma=amount.replace(/\B(?=(\d{3})+(?!\d))/g,',');
+      return format.replace(/\{\{\s*amount\s*\}\}/g,amount).replace(/\{\{\s*amount_no_decimals\s*\}\}/g,noDecimals).replace(/\{\{\s*amount_with_comma_separator\s*\}\}/g,comma).replace(/\{\{\s*amount_no_decimals_with_comma_separator\s*\}\}/g,noDecimals.replace(/\B(?=(\d{3})+(?!\d))/g,','));
+    }
+    selectVariant(card,selected){
+      card.querySelectorAll('[data-variant-button]').forEach((button)=>button.setAttribute('aria-pressed',button===selected?'true':'false'));
+      card.dataset.variantId=selected.dataset.id;
+      const price=card.querySelector('[data-current-price]'), compare=card.querySelector('[data-compare-price]'), image=card.querySelector('[data-product-image]'), add=card.querySelector('[data-quick-add]'), status=card.querySelector('[data-status]');
+      const moneyFormat={{ shop.money_format | json }}, current=Number(selected.dataset.price), comp=Number(selected.dataset.compare);
+      if(price) price.textContent=this.formatMoney(current,moneyFormat);
+      if(compare){compare.textContent=comp>current?this.formatMoney(comp,moneyFormat):'';compare.hidden=!(comp>current);}
+      if(image&&selected.dataset.image){image.src=selected.dataset.image; image.srcset='';}
+      if(add){const available=selected.dataset.available==='true';add.disabled=!available;add.textContent=available?{{ block.settings.quick_add_label | json }}:{{ block.settings.sold_out_label | json }};}
+      if(status) status.textContent='';
+    }
+    async addToCart(card,button){
+      const status=card.querySelector('[data-status]'), variantId=card.dataset.variantId;
+      if(!variantId||button.disabled)return;
+      button.disabled=true; status.textContent='Adding…';
+      try{
+        const root=window.Shopify&&Shopify.routes&&Shopify.routes.root?Shopify.routes.root:'/';
+        const response=await fetch(root+'cart/add.js',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({items:[{id:Number(variantId),quantity:1}]})});
+        if(!response.ok)throw new Error('Unable to add this item.');
+        await response.json(); status.textContent='Added to cart';
+        const active=card.querySelector('[data-variant-button][aria-pressed="true"]');
+        button.disabled=active?active.dataset.available!=='true':card.querySelector('[data-single-variant]')?.dataset.available!=='true';
+        document.dispatchEvent(new CustomEvent('cart:refresh')); document.dispatchEvent(new CustomEvent('cart:updated'));
+      }catch(error){status.textContent=error.message||'Unable to add this item.';button.disabled=false;}
+    }
+  }
+  customElements.define(tagName,FeaturedCollection{{ ai_gen_id }});
+})();
+</script>
+
+{% schema %}
+{
+  "name":"Featured collection",
+  "tag":null,
+  "class":"featured-collection-block",
+  "settings":[
+    {"type":"collection","id":"collection","label":"Collection"},
+    {"type":"text","id":"heading","label":"Heading","default":"Featured collection"},
+    {"type":"richtext","id":"description","label":"Description","default":"<p>Explore our featured products.</p>"},
+    {"type":"range","id":"products_to_show","label":"Products shown","min":2,"max":12,"step":1,"default":4},
+    {"type":"range","id":"desktop_width_percent","label":"Desktop width","min":50,"max":100,"step":5,"unit":"%","default":100},
+    {"type":"range","id":"columns_desktop","label":"Desktop columns","min":2,"max":6,"step":1,"default":4},
+    {"type":"select","id":"columns_mobile","label":"Mobile columns","options":[{"value":"1","label":"1"},{"value":"2","label":"2"}],"default":"2"},
+    {"type":"checkbox","id":"mobile_carousel","label":"Enable mobile carousel","default":false},
+    {"type":"range","id":"mobile_carousel_width","label":"Mobile carousel card width","min":70,"max":95,"step":5,"unit":"%","default":85},
+    {"type":"header","content":"Product card descriptions"},
+    {"type":"paragraph","content":"Descriptions apply to products in their displayed order, up to eight."},
+    {"type":"richtext","id":"card_description_1","label":"Product 1 description","default":"<p> </p>"},
+    {"type":"richtext","id":"card_description_2","label":"Product 2 description","default":"<p> </p>"},
+    {"type":"richtext","id":"card_description_3","label":"Product 3 description","default":"<p> </p>"},
+    {"type":"richtext","id":"card_description_4","label":"Product 4 description","default":"<p> </p>"},
+    {"type":"richtext","id":"card_description_5","label":"Product 5 description","default":"<p> </p>"},
+    {"type":"richtext","id":"card_description_6","label":"Product 6 description","default":"<p> </p>"},
+    {"type":"richtext","id":"card_description_7","label":"Product 7 description","default":"<p> </p>"},
+    {"type":"richtext","id":"card_description_8","label":"Product 8 description","default":"<p> </p>"},
+    {"type":"header","content":"Display options"},
+    {"type":"checkbox","id":"show_title","label":"Show product title","default":true},
+    {"type":"checkbox","id":"show_price","label":"Show price","default":true},
+    {"type":"checkbox","id":"show_description","label":"Show custom descriptions","default":true},
+    {"type":"checkbox","id":"show_variant_selector","label":"Show variant buttons","default":true},
+    {"type":"checkbox","id":"show_quick_add","label":"Show quick add","default":true},
+    {"type":"checkbox","id":"show_view_all","label":"Show view all button","default":true},
+    {"type":"text","id":"view_all_label","label":"View all label","default":"View all"},
+    {"type":"text","id":"quick_add_label","label":"Quick add label","default":"Quick add"},
+    {"type":"text","id":"sold_out_label","label":"Sold out label","default":"Sold out"},
+    {"type":"header","content":"Layout"},
+    {"type":"range","id":"padding_vertical","label":"Section vertical padding","min":0,"max":80,"step":4,"unit":"px","default":32},
+    {"type":"range","id":"padding_horizontal","label":"Section horizontal padding","min":0,"max":80,"step":4,"unit":"px","default":24},
+    {"type":"range","id":"mobile_padding","label":"Mobile vertical padding","min":0,"max":60,"step":4,"unit":"px","default":24},
+    {"type":"range","id":"mobile_side_padding","label":"Mobile side padding","min":0,"max":32,"step":2,"unit":"px","default":16},
+    {"type":"range","id":"card_gap","label":"Card spacing","min":0,"max":48,"step":4,"unit":"px","default":20},
+    {"type":"range","id":"mobile_gap","label":"Mobile spacing","min":0,"max":32,"step":2,"unit":"px","default":12},
+    {"type":"range","id":"card_padding","label":"Card padding","min":0,"max":32,"step":2,"unit":"px","default":12},
+    {"type":"range","id":"mobile_card_padding","label":"Mobile card padding","min":0,"max":24,"step":2,"unit":"px","default":8},
+    {"type":"range","id":"border_width","label":"Card border width","min":0,"max":4,"step":1,"unit":"px","default":1},
+    {"type":"range","id":"card_radius","label":"Card radius","min":0,"max":32,"step":2,"unit":"px","default":8},
+    {"type":"range","id":"button_radius","label":"Quick add radius","min":0,"max":32,"step":2,"unit":"px","default":4},
+    {"type":"select","id":"image_ratio","label":"Desktop image ratio","options":[{"value":"1 / 1","label":"Square"},{"value":"4 / 5","label":"Portrait"},{"value":"3 / 2","label":"Landscape"}],"default":"1 / 1"},
+    {"type":"select","id":"image_ratio_mobile","label":"Mobile image ratio","options":[{"value":"1 / 1","label":"Square"},{"value":"4 / 5","label":"Portrait"},{"value":"3 / 2","label":"Landscape"}],"default":"1 / 1"},
+    {"type":"select","id":"image_fit","label":"Image fit","options":[{"value":"cover","label":"Cover"},{"value":"contain","label":"Contain"}],"default":"cover"},
+    {"type":"range","id":"heading_size","label":"Heading size","min":18,"max":48,"step":2,"unit":"px","default":30},
+    {"type":"range","id":"card_title_size","label":"Product title size","min":12,"max":24,"step":1,"unit":"px","default":16},
+    {"type":"select","id":"text_alignment","label":"Text alignment","options":[{"value":"left","label":"Left"},{"value":"center","label":"Center"},{"value":"right","label":"Right"}],"default":"left"},
+    {"type":"header","content":"Variant buttons"},
+    {"type":"range","id":"variant_min_width","label":"Minimum button width","min":40,"max":160,"step":10,"unit":"px","default":70},
+    {"type":"range","id":"variant_height","label":"Button height","min":32,"max":64,"step":4,"unit":"px","default":44},
+    {"type":"range","id":"variant_padding","label":"Button padding","min":4,"max":24,"step":2,"unit":"px","default":10},
+    {"type":"range","id":"variant_gap","label":"Button spacing","min":0,"max":20,"step":2,"unit":"px","default":8},
+    {"type":"range","id":"variant_font_size","label":"Button text size","min":10,"max":18,"step":1,"unit":"px","default":13},
+    {"type":"range","id":"variant_border_width","label":"Button border width","min":0,"max":4,"step":1,"unit":"px","default":1},
+    {"type":"range","id":"variant_radius","label":"Button radius","min":0,"max":32,"step":2,"unit":"px","default":6},
+    {"type":"header","content":"Colors"},
+    {"type":"color","id":"section_bg","label":"Section background","default":"#FFFFFF"},
+    {"type":"color","id":"card_bg","label":"Product card background","default":"#FFFFFF"},
+    {"type":"color","id":"title_color","label":"Product title","default":"#000000"},
+    {"type":"color","id":"price_color","label":"Price","default":"#000000"},
+    {"type":"color","id":"description_color","label":"Description text","default":"#444444"},
+    {"type":"color","id":"border_color","label":"Card border","default":"#D4DFE7"},
+    {"type":"color","id":"variant_bg","label":"Variant background","default":"#FFFFFF"},
+    {"type":"color","id":"variant_text","label":"Variant text","default":"#000000"},
+    {"type":"color","id":"variant_border_color","label":"Variant border","default":"#444444"},
+    {"type":"color","id":"selected_variant_bg","label":"Selected variant background","default":"#000000"},
+    {"type":"color","id":"selected_variant_text","label":"Selected variant text","default":"#FFFFFF"},
+    {"type":"color","id":"selected_variant_border","label":"Selected variant border","default":"#000000"},
+    {"type":"color","id":"button_bg","label":"Quick add background","default":"#000000"},
+    {"type":"color","id":"button_text","label":"Quick add text","default":"#FFFFFF"}
+  ],
+  "presets":[{"name":"Featured collection"}]
+}
+{% endschema %}

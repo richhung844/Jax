@@ -1,0 +1,287 @@
+{% doc %}
+  @prompt
+    Create a customizable Shopify Featured Product section based closely on the existing Luxe theme Featured Product layout.
+    
+    DESIGN:
+    - Maintain the Luxe theme's clean, spacious two-column layout and existing site typography.
+    - Product information on the left and product image on the right.
+    - Both columns should have a white background.
+    - Add a customizable green outer frame/background visible around the section and between columns.
+    - Stack responsively on mobile.
+    
+    SECTION HEADER:
+    Add an optional section header above the two-column product area with:
+    - Editable heading
+    - Optional subheading
+    - Optional link + link label
+    - Show/hide setting
+    - Editable left, center, or right alignment
+    - Editable spacing above/below
+    
+    PRODUCT CONTENT:
+    Left column should include:
+    1. Product title
+    2. Dynamic price
+    3. Custom rich-text description
+    4. Optional Learn More link
+    5. Icon + text callouts
+    6. Add to Bag button
+    
+    Allow independent alignment controls for:
+    - Product content: left, center, or right
+    - Section header: left, center, or right
+    - Icon callout area: left, center, or right
+    - Add to Bag button: left, center, right, or full width
+    - Product image: left, center, or right
+    
+    ICON CALLOUTS:
+    Add up to 4 customizable icon callout blocks directly above the Add to Bag button.
+    
+    Each callout should include:
+    - Custom uploaded icon or built-in icon
+    - Editable heading
+    - Editable supporting text
+    - Optional URL
+    - Setting to make the heading/text clickable
+    - Optional setting to make the entire callout clickable
+    - Editable icon size/color
+    - Editable text colors
+    
+    Display horizontally on desktop and responsively wrap/stack on mobile.
+    
+    IMAGE:
+    - Automatically pull the selected product image.
+    - Use object-fit: contain with no cropping.
+    - Allow custom image override and adjustable image scale.
+    
+    ADD TO BAG + CART DRAWER:
+    IMPORTANT: The Add to Bag button must use the Luxe theme's existing AJAX cart/cart drawer behavior.
+    
+    - Do NOT redirect the customer to /cart.
+    - Do NOT use a standard product form submission that reloads the page.
+    - When Add to Bag is clicked, add the selected variant asynchronously using the same cart functionality already used by the Luxe theme.
+    - After the item is successfully added, automatically open the EXISTING Luxe theme cart drawer.
+    - Update the cart drawer contents and cart count/bubble immediately.
+    - Reuse the theme's existing product-form, cart drawer, cart notification, events, classes, and JavaScript APIs wherever possible instead of creating a separate cart system.
+    - Do not create a second custom cart drawer.
+    - Prevent default form submission/navigation to the cart page.
+    - Preserve variant ID, quantity, selling plan, and product properties when applicable.
+    - The behavior should match the Add to Bag buttons already used elsewhere in the Luxe theme.
+    
+    CUSTOMIZATION:
+    Include Theme Editor controls for:
+    - Product picker
+    - Section heading/subheading/link
+    - Custom product title/description
+    - Learn More text + URL
+    - Green frame color
+    - Content and image background colors
+    - Text/icon colors
+    - Badge text, icons, links, and colors
+    - Button colors and hover colors
+    - Section/column spacing
+    - Image scale
+    - Mobile column order
+    - Independent alignment controls for header, product content, callouts, button, and image
+    
+    TYPOGRAPHY:
+    All text must inherit the existing Luxe theme/site typography. Do not introduce new fonts. Match the site's existing headings, body copy, links, badges, prices, and buttons.
+    
+    TECHNICAL:
+    - Preserve existing Luxe theme functionality/classes whenever possible.
+    - Scope custom CSS/JS to this section.
+    - Multiple instances must work without conflicts.
+    - All content, icons, links, colors, spacing, and alignment should be editable through the Theme Editor.
+    
+    FINAL GOAL:
+    Keep the appearance and functionality of the existing Luxe Featured Product section, but add the green frame, optional section header, linked icon callouts, expanded alignment controls, and icon/text benefit row above Add to Bag. Add to Bag MUST add the item via AJAX and open the existing Luxe cart drawer without navigating to the cart page., remove the 4th call out and add a customizeable product badge label
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}{% assign featured_product = block.settings.product %}{% if featured_product != blank %}{% assign featured_variant = featured_product.selected_or_first_available_variant %}{% endif %}
+{% style %}
+.ai-featured-{{ ai_gen_id }}{display:block;width:100%;max-width:100%;background:{{ block.settings.frame_color }};padding:{{ block.settings.frame_padding }}px}.ai-featured-{{ ai_gen_id }}__header{width:{{ block.settings.desktop_width_percent }}%;max-width:100%;margin:{{ block.settings.header_top }}px auto {{ block.settings.header_bottom }}px;text-align:{{ block.settings.header_alignment }}}.ai-featured-{{ ai_gen_id }}__header h2{margin:0 0 8px}.ai-featured-{{ ai_gen_id }}__grid{display:grid;grid-template-columns:1fr 1fr;gap:{{ block.settings.column_gap }}px;width:100%}.ai-featured-{{ ai_gen_id }}__content,.ai-featured-{{ ai_gen_id }}__media{background:{{ block.settings.panel_color }};min-width:0}.ai-featured-{{ ai_gen_id }}__content{padding:{{ block.settings.content_padding }}px;text-align:{{ block.settings.content_alignment }};display:flex;flex-direction:column;justify-content:center}.ai-featured-{{ ai_gen_id }}__media{display:flex;align-items:center;justify-content:{{ block.settings.image_alignment }};padding:{{ block.settings.content_padding }}px;overflow:hidden}.ai-featured-{{ ai_gen_id }}__image{display:block;width:{{ block.settings.image_scale }}%;max-width:100%;height:auto;object-fit:contain}.ai-featured-{{ ai_gen_id }}__placeholder{width:100%}.ai-featured-{{ ai_gen_id }}__placeholder svg{display:block;width:100%;height:auto;background:#f4f4f4}.ai-featured-{{ ai_gen_id }}__price{margin:0 0 18px}.ai-featured-{{ ai_gen_id }}__description{margin-bottom:18px}.ai-featured-{{ ai_gen_id }}__badge{display:inline-flex;align-self:flex-start;margin:0 0 12px;padding:6px 10px;background:{{ block.settings.badge_background }};color:{{ block.settings.badge_text_color }};font-size:.85em}.ai-featured-{{ ai_gen_id }}__content[style*="text-align: center"] .ai-featured-{{ ai_gen_id }}__badge{align-self:center}.ai-featured-{{ ai_gen_id }}__content[style*="text-align: right"] .ai-featured-{{ ai_gen_id }}__badge{align-self:flex-end}.ai-featured-{{ ai_gen_id }}__callouts{display:flex;flex-wrap:wrap;justify-content:{{ block.settings.callout_alignment }};gap:18px;margin:8px 0 24px}.ai-featured-{{ ai_gen_id }}__callout{display:flex;align-items:center;gap:10px;text-align:left;max-width:100%;color:{{ block.settings.callout_text_color }}}.ai-featured-{{ ai_gen_id }}__callout-icon,.ai-featured-{{ ai_gen_id }}__callout svg{width:{{ block.settings.icon_size }}px;height:{{ block.settings.icon_size }}px;object-fit:contain;flex:0 0 auto;color:{{ block.settings.icon_color }}}.ai-featured-{{ ai_gen_id }}__callout strong,.ai-featured-{{ ai_gen_id }}__callout span{display:block}.ai-featured-{{ ai_gen_id }}__callout strong{color:{{ block.settings.callout_heading_color }}}.ai-featured-{{ ai_gen_id }}__callout a{color:inherit;text-decoration:none}.ai-featured-{{ ai_gen_id }} a:focus-visible,.ai-featured-{{ ai_gen_id }} button:focus-visible{outline:2px solid currentColor;outline-offset:3px}.ai-featured-{{ ai_gen_id }}__button-row{display:flex;justify-content:{{ block.settings.button_alignment }}}.ai-featured-{{ ai_gen_id }}__button-row--full{display:block}.ai-featured-{{ ai_gen_id }}__button{display:inline-flex;justify-content:center;align-items:center;min-height:48px;padding:12px 28px;border:1px solid {{ block.settings.button_color }};background:{{ block.settings.button_color }};color:{{ block.settings.button_text_color }};font:inherit;text-decoration:none;cursor:pointer}.ai-featured-{{ ai_gen_id }}__button:hover{background:{{ block.settings.button_hover_color }};border-color:{{ block.settings.button_hover_color }};color:{{ block.settings.button_hover_text_color }}}.ai-featured-{{ ai_gen_id }}__button-row--full .ai-featured-{{ ai_gen_id }}__button{width:100%}.ai-featured-{{ ai_gen_id }}__error{color:#9b1c1c;margin-top:10px}@media(max-width:749px){.ai-featured-{{ ai_gen_id }}__header{width:100%}.ai-featured-{{ ai_gen_id }}__grid{grid-template-columns:1fr}.ai-featured-{{ ai_gen_id }}--image-first .ai-featured-{{ ai_gen_id }}__media{order:0}.ai-featured-{{ ai_gen_id }}--image-first .ai-featured-{{ ai_gen_id }}__content{order:1}.ai-featured-{{ ai_gen_id }}--content-first .ai-featured-{{ ai_gen_id }}__content{order:0}.ai-featured-{{ ai_gen_id }}--content-first .ai-featured-{{ ai_gen_id }}__media{order:1}}
+{% endstyle %}
+<featured-product-{{ ai_gen_id }} class="ai-featured-{{ ai_gen_id }} ai-featured-{{ ai_gen_id }}--{{ block.settings.mobile_order }}" {{ block.shopify_attributes }}>
+{% if block.settings.show_header %}<div class="ai-featured-{{ ai_gen_id }}__header">{% if block.settings.section_heading != blank %}<h2>{{ block.settings.section_heading | escape }}</h2>{% endif %}{% if block.settings.section_subheading != blank %}<div>{{ block.settings.section_subheading }}</div>{% endif %}{% if block.settings.header_link != blank and block.settings.header_link_label != blank %}<a href="{{ block.settings.header_link }}">{{ block.settings.header_link_label | escape }}</a>{% endif %}</div>{% endif %}
+<div class="ai-featured-{{ ai_gen_id }}__grid"><div class="ai-featured-{{ ai_gen_id }}__content">{% if featured_product != blank %}{% if block.settings.badge_label != blank %}{% if block.settings.badge_link != blank %}<a class="ai-featured-{{ ai_gen_id }}__badge" href="{{ block.settings.badge_link }}">{{ block.settings.badge_label | escape }}</a>{% else %}<span class="ai-featured-{{ ai_gen_id }}__badge">{{ block.settings.badge_label | escape }}</span>{% endif %}{% endif %}<h2>{{ block.settings.custom_title | default: featured_product.title | escape }}</h2><div class="ai-featured-{{ ai_gen_id }}__price">{% if featured_variant.compare_at_price > featured_variant.price %}<s>{{ featured_variant.compare_at_price | money }}</s> {% endif %}<span>{{ featured_variant.price | money }}</span></div>{% if block.settings.custom_description != blank %}<div class="ai-featured-{{ ai_gen_id }}__description">{{ block.settings.custom_description }}</div>{% endif %}{% if block.settings.learn_more_url != blank and block.settings.learn_more_label != blank %}<p><a href="{{ block.settings.learn_more_url }}">{{ block.settings.learn_more_label | escape }}</a></p>{% endif %}
+<div class="ai-featured-{{ ai_gen_id }}__callouts">{% for i in (1..3) %}{% liquid
+assign title_key='callout_' | append:i | append:'_heading'
+assign text_key='callout_' | append:i | append:'_text'
+assign image_key='callout_' | append:i | append:'_image'
+assign url_key='callout_' | append:i | append:'_url'
+assign heading_link_key='callout_' | append:i | append:'_heading_link'
+assign whole_link_key='callout_' | append:i | append:'_whole_link'
+assign ch=block.settings[title_key]
+assign ct=block.settings[text_key]
+assign ci=block.settings[image_key]
+assign cu=block.settings[url_key]
+assign hl=block.settings[heading_link_key]
+assign wl=block.settings[whole_link_key]
+%}{% if ch != blank or ct != blank %}<div class="ai-featured-{{ ai_gen_id }}__callout">{% if ci != blank %}<img class="ai-featured-{{ ai_gen_id }}__callout-icon" src="{{ ci | image_url: width: 128 }}" alt="" loading="lazy">{% else %}<svg class="ai-featured-{{ ai_gen_id }}__callout-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3 4 7v5c0 5 3.5 8 8 9 4.5-1 8-4 8-9V7l-8-4Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg>{% endif %}<div>{% if ch != blank %}<strong>{% if hl and cu != blank %}<a href="{{ cu }}">{{ ch | escape }}</a>{% else %}{{ ch | escape }}{% endif %}</strong>{% endif %}{% if ct != blank %}{% if wl and cu != blank %}<a href="{{ cu }}"><span>{{ ct | escape }}</span></a>{% else %}<span>{{ ct | escape }}</span>{% endif %}{% endif %}</div></div>{% endif %}{% endfor %}</div>
+{% if featured_variant != blank %}<div class="ai-featured-{{ ai_gen_id }}__button-row{% if block.settings.button_alignment == 'full' %} ai-featured-{{ ai_gen_id }}__button-row--full{% endif %}"><button type="button" class="ai-featured-{{ ai_gen_id }}__button" data-add-button data-variant-id="{{ featured_variant.id }}" {% unless featured_variant.available %}disabled{% endunless %}>{% if featured_variant.available %}{{ block.settings.button_label | escape }}{% else %}Sold out{% endif %}</button></div><div class="ai-featured-{{ ai_gen_id }}__error" data-error role="alert" hidden></div>{% endif %}{% else %}<p>Select a product in the block settings to display it.</p>{% endif %}</div><div class="ai-featured-{{ ai_gen_id }}__media">{% assign display_image=block.settings.image_override | default:featured_product.featured_image %}{% if display_image != blank %}<img class="ai-featured-{{ ai_gen_id }}__image" src="{{ display_image | image_url: width: 1600 }}" alt="{{ display_image.alt | default:featured_product.title | escape }}" loading="lazy" width="{{ display_image.width }}" height="{{ display_image.height }}">{% else %}<div class="ai-featured-{{ ai_gen_id }}__placeholder">{{ 'product-apparel-1' | placeholder_svg_tag }}<p>Add a product or choose an image.</p></div>{% endif %}</div></div></featured-product-{{ ai_gen_id }}>
+<script>
+(function () {
+  const tag = 'featured-product-{{ ai_gen_id }}';
+
+  if (customElements.get(tag)) return;
+
+  class FeaturedProduct{{ ai_gen_id }} extends HTMLElement {
+    connectedCallback() {
+      this.button = this.querySelector('[data-add-button]');
+      this.error = this.querySelector('[data-error]');
+      this.cart =
+        document.querySelector('cart-notification') ||
+        document.querySelector('cart-drawer');
+
+      if (this.button) {
+        this.button.addEventListener('click', () => this.addItem());
+      }
+    }
+
+    async addItem() {
+      if (!this.button || this.button.disabled) return;
+
+      const button = this.button;
+      const variantId = button.dataset.variantId;
+
+      if (!variantId) {
+        this.showError('Product variant could not be found.');
+        return;
+      }
+
+      button.disabled = true;
+
+      if (this.error) {
+        this.error.hidden = true;
+        this.error.textContent = '';
+      }
+
+      try {
+        const config = fetchConfig('javascript');
+
+        config.headers['X-Requested-With'] = 'XMLHttpRequest';
+        delete config.headers['Content-Type'];
+
+        const formData = new FormData();
+
+        formData.append('id', variantId);
+        formData.append('quantity', '1');
+
+        /*
+         * Ask Luxe/Shopify to return the exact sections
+         * required by the existing cart drawer.
+         */
+        if (this.cart) {
+          formData.append(
+            'sections',
+            this.cart
+              .getSectionsToRender()
+              .map((section) => section.id)
+          );
+
+          formData.append(
+            'sections_url',
+            window.location.pathname
+          );
+
+          if (typeof this.cart.setActiveElement === 'function') {
+            this.cart.setActiveElement(document.activeElement);
+          }
+        }
+
+        config.body = formData;
+
+        const response = await fetch(
+          routes.cart_add_url,
+          config
+        );
+
+        const result = await response.json();
+
+        /*
+         * Shopify returned an add-to-cart error.
+         */
+        if (result.status) {
+          if (
+            typeof publish === 'function' &&
+            typeof PUB_SUB_EVENTS !== 'undefined'
+          ) {
+            publish(PUB_SUB_EVENTS.cartError, {
+              source: 'featured-product',
+              productVariantId: variantId,
+              errors: result.errors || result.description,
+              message: result.message
+            });
+          }
+
+          throw new Error(
+            result.description ||
+            result.message ||
+            'Unable to add this product.'
+          );
+        }
+
+        /*
+         * Publish the same Luxe cart update event
+         * used by product-form.js.
+         */
+        if (
+          typeof publish === 'function' &&
+          typeof PUB_SUB_EVENTS !== 'undefined'
+        ) {
+          publish(PUB_SUB_EVENTS.cartUpdate, {
+            source: 'featured-product',
+            productVariantId: variantId,
+            cartData: result
+          });
+        }
+
+        /*
+         * THIS is the important part:
+         * give Luxe the response containing its newly
+         * rendered cart drawer sections.
+         */
+        if (
+          this.cart &&
+          typeof this.cart.renderContents === 'function'
+        ) {
+          this.cart.renderContents(result);
+
+          if (this.cart.classList.contains('is-empty')) {
+            this.cart.classList.remove('is-empty');
+          }
+        } else {
+          throw new Error(
+            'The Luxe cart drawer could not be loaded.'
+          );
+        }
+
+      } catch (error) {
+        console.error(
+          'Featured Product Add to Bag:',
+          error
+        );
+
+        this.showError(
+          error.message ||
+          'Unable to add this product. Please try again.'
+        );
+      } finally {
+        button.disabled = false;
+      }
+    }
+
+    showError(message) {
+      if (!this.error) return;
+
+      this.error.textContent = message;
+      this.error.hidden = false;
+    }
+  }
+
+  customElements.define(
+    tag,
+    FeaturedProduct{{ ai_gen_id }}
+  );
+})();
+</script>
+{% schema %}{"name":"Featured product luxe","settings":[{"type":"product","id":"product","label":"Product"},{"type":"range","id":"desktop_width_percent","label":"Desktop width","min":50,"max":100,"step":5,"unit":"%","default":100},{"type":"header","content":"Section header"},{"type":"checkbox","id":"show_header","label":"Show header","default":true},{"type":"text","id":"section_heading","label":"Heading","default":"Featured product"},{"type":"richtext","id":"section_subheading","label":"Subheading","default":"<p>Discover a new favorite.</p>"},{"type":"text","id":"header_link_label","label":"Link label","default":"Discover more"},{"type":"url","id":"header_link","label":"Header link"},{"type":"select","id":"header_alignment","label":"Alignment","options":[{"value":"left","label":"Left"},{"value":"center","label":"Center"},{"value":"right","label":"Right"}],"default":"left"},{"type":"range","id":"header_top","label":"Spacing above","min":0,"max":80,"step":5,"unit":"px","default":20},{"type":"range","id":"header_bottom","label":"Spacing below","min":0,"max":80,"step":5,"unit":"px","default":25},{"type":"header","content":"Product badge"},{"type":"text","id":"badge_label","label":"Badge label"},{"type":"url","id":"badge_link","label":"Badge link"},{"type":"color","id":"badge_background","label":"Badge background","default":"#1B5E20"},{"type":"color","id":"badge_text_color","label":"Badge text","default":"#FFFFFF"},{"type":"header","content":"Product content"},{"type":"text","id":"custom_title","label":"Custom title"},{"type":"richtext","id":"custom_description","label":"Description","default":"<p>Add a short description that tells customers what makes this product special.</p>"},{"type":"text","id":"learn_more_label","label":"Learn more label","default":"Learn more"},{"type":"url","id":"learn_more_url","label":"Learn more link"},{"type":"select","id":"content_alignment","label":"Product alignment","options":[{"value":"left","label":"Left"},{"value":"center","label":"Center"},{"value":"right","label":"Right"}],"default":"left"},{"type":"text","id":"button_label","label":"Button label","default":"Add to Bag"},{"type":"select","id":"button_alignment","label":"Button alignment","options":[{"value":"left","label":"Left"},{"value":"center","label":"Center"},{"value":"right","label":"Right"},{"value":"full","label":"Full width"}],"default":"left"},{"type":"color","id":"button_color","label":"Button background","default":"#000000"},{"type":"color","id":"button_text_color","label":"Button text","default":"#FFFFFF"},{"type":"color","id":"button_hover_color","label":"Button hover background","default":"#222222"},{"type":"color","id":"button_hover_text_color","label":"Button hover text","default":"#FFFFFF"},{"type":"header","content":"Icon callouts"},{"type":"select","id":"callout_alignment","label":"Callout alignment","options":[{"value":"flex-start","label":"Left"},{"value":"center","label":"Center"},{"value":"flex-end","label":"Right"}],"default":"flex-start"},{"type":"range","id":"icon_size","label":"Icon size","min":16,"max":48,"step":4,"unit":"px","default":24},{"type":"color","id":"icon_color","label":"Icon color","default":"#1B5E20"},{"type":"color","id":"callout_heading_color","label":"Callout heading","default":"#111111"},{"type":"color","id":"callout_text_color","label":"Callout text","default":"#444444"},{"type":"header","content":"Callout 1"},{"type":"image_picker","id":"callout_1_image","label":"Custom icon"},{"type":"text","id":"callout_1_heading","label":"Heading","default":"Quality ingredients"},{"type":"text","id":"callout_1_text","label":"Supporting text","default":"Made with care"},{"type":"url","id":"callout_1_url","label":"Link"},{"type":"checkbox","id":"callout_1_heading_link","label":"Link heading and text","default":false},{"type":"checkbox","id":"callout_1_whole_link","label":"Link whole callout","default":false},{"type":"header","content":"Callout 2"},{"type":"image_picker","id":"callout_2_image","label":"Custom icon"},{"type":"text","id":"callout_2_heading","label":"Heading","default":"Easy to use"},{"type":"text","id":"callout_2_text","label":"Supporting text","default":"Simple daily ritual"},{"type":"url","id":"callout_2_url","label":"Link"},{"type":"checkbox","id":"callout_2_heading_link","label":"Link heading and text","default":false},{"type":"checkbox","id":"callout_2_whole_link","label":"Link whole callout","default":false},{"type":"header","content":"Callout 3"},{"type":"image_picker","id":"callout_3_image","label":"Custom icon"},{"type":"text","id":"callout_3_heading","label":"Heading","default":"Thoughtful design"},{"type":"text","id":"callout_3_text","label":"Supporting text","default":"Designed for you"},{"type":"url","id":"callout_3_url","label":"Link"},{"type":"checkbox","id":"callout_3_heading_link","label":"Link heading and text","default":false},{"type":"checkbox","id":"callout_3_whole_link","label":"Link whole callout","default":false},{"type":"header","content":"Image and layout"},{"type":"image_picker","id":"image_override","label":"Image override"},{"type":"range","id":"image_scale","label":"Image scale","min":50,"max":100,"step":5,"unit":"%","default":90},{"type":"select","id":"image_alignment","label":"Image alignment","options":[{"value":"flex-start","label":"Left"},{"value":"center","label":"Center"},{"value":"flex-end","label":"Right"}],"default":"center"},{"type":"select","id":"mobile_order","label":"Mobile column order","options":[{"value":"image-first","label":"Image first"},{"value":"content-first","label":"Content first"}],"default":"image-first"},{"type":"range","id":"frame_padding","label":"Frame thickness","min":0,"max":40,"step":2,"unit":"px","default":12},{"type":"range","id":"content_padding","label":"Column spacing","min":10,"max":80,"step":5,"unit":"px","default":40},{"type":"range","id":"column_gap","label":"Space between columns","min":0,"max":40,"step":5,"unit":"px","default":10},{"type":"color","id":"frame_color","label":"Green frame","default":"#1B5E20"},{"type":"color","id":"panel_color","label":"Column background","default":"#FFFFFF"}],"presets":[{"name":"Featured product luxe"}],"tag":null,"class":"featured-product-luxe-block"}{% endschema %}

@@ -1,0 +1,355 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "content_width": "page-width-medium",
+        "hdr_alignment": "center",
+        "heading_hide": false,
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_3jwT93": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_eTT6xh": {
+          "type": "heading",
+          "settings": {
+            "heading": "FAQ",
+            "heading_size": "h0",
+            "alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 20
+          }
+        },
+        "text_3AU7A3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Everything you need to know before your first JAX.</p>",
+            "text_size": "text-large",
+            "alignment": "center",
+            "text_indent": "noindent",
+            "padding_top": 0,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_eTT6xh",
+        "text_3AU7A3"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "content_width": "page-width",
+        "content_horizontal_position": "center",
+        "bg_image_darken": 0,
+        "bg_image_blur": 0,
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top": 80,
+        "padding_bottom": 0,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "collapsible_content": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_8aQjkK": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "What exactly is JAX?",
+            "content": "<p>JAX is a portable liquid THC drop you can add to any drink. One click of the device delivers a precise dose of hemp-derived delta-9 THC — tasteless, odorless, and fast-acting. Think of it as the social alternative to alcohol.</p>",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        },
+        "collapsible_row_FHGiNX": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "What does it feel like?",
+            "content": "<p>A relaxed, social buzz — similar to the feeling of a drink or two, without the alcohol. Most people feel it within 5–15 minutes.</p>",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        },
+        "collapsible_row_DUQ4MT": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "Will it change the taste of my drink?",
+            "content": "<p>No. JAX is completely tasteless and odorless. Add it to water, juice, a mocktail, or anything else — you won't notice it's there.</p>",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        },
+        "collapsible_row_jqDGrQ": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "How is this different from an edible?",
+            "content": "<p>Edibles can take 45–90 minutes to kick in and are notoriously hard to dose. JAX is designed for social settings — faster onset, precise dosing, and easy to bring anywhere. You're in control from the first click.</p>",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_8aQjkK",
+        "collapsible_row_FHGiNX",
+        "collapsible_row_DUQ4MT",
+        "collapsible_row_jqDGrQ"
+      ],
+      "settings": {
+        "section_label": "",
+        "heading": "What it is",
+        "heading_size": "h2",
+        "subheading": "",
+        "btn_enable": false,
+        "btn_txt": "",
+        "btn_url": "",
+        "btn_style": "solid",
+        "btn_color_scheme": "default",
+        "content_alignment": "left",
+        "content_width": "standard",
+        "column_layout": "1",
+        "accordion_title_font": "body",
+        "accordion_title_size": "std",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top": 40,
+        "padding_bottom": 10,
+        "top_border": false,
+        "bottom_border": true,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "collapsible_content_EmFg4r": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_pqEMMp": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "How much should I take?",
+            "content": "<p>Start with one shot (1mg THC). Wait 15 minutes before adding more. JAX is built around control — you can always add more.</p>",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        },
+        "collapsible_row_jFeUGg": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "title": "What's the difference between Elixir and Elixir+?",
+            "content": "<p>Elixir delivers 1mg per shot (50mg per pod) — great for beginners or a lighter experience. Elixir+ is 2.5mg per shot (100mg per pod) — for those who want a stronger or longer-lasting effect. When in doubt, start with Elixir.</p>",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        },
+        "collapsible_row_c63NTm": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "Can I mix it with alcohol?",
+            "content": "<p>We don't recommend it. THC and alcohol together can intensify effects in unpredictable ways. JAX is designed as an alternative to alcohol, not a mixer with it.</p>",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        },
+        "collapsible_row_hwYRiU": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "What if I take too much?",
+            "content": "<p>Find a comfortable place to sit, drink water, and don't panic — the feeling will pass. Start low next time. This is exactly why JAX is built around precise, one-shot dosing.</p>",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_pqEMMp",
+        "collapsible_row_jFeUGg",
+        "collapsible_row_c63NTm",
+        "collapsible_row_hwYRiU"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "section_label": "",
+        "heading": "Dosing",
+        "heading_size": "h2",
+        "subheading": "",
+        "btn_enable": false,
+        "btn_txt": "",
+        "btn_url": "",
+        "btn_style": "solid",
+        "btn_color_scheme": "default",
+        "content_alignment": "left",
+        "content_width": "standard",
+        "column_layout": "1",
+        "accordion_title_font": "body",
+        "accordion_title_size": "std",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top": 20,
+        "padding_bottom": 10,
+        "top_border": false,
+        "bottom_border": true,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "collapsible_content_G4NH3L": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_xhptxz": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "Is JAX legal?",
+            "content": "<p>Yes. JAX uses hemp-derived delta-9 THC that complies with the federal legal limit under the 2018 Farm Bill. However, state laws vary — check your local regulations before purchasing.</p>",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        },
+        "collapsible_row_FNbXRR": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "Is it safe to drive after using JAX?",
+            "content": "<p>No. THC impairs your ability to drive. Treat it like alcohol — don't drive, operate machinery, or make important decisions after use.</p>",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        },
+        "collapsible_row_9jdAxn": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "Who shouldn't use JAX?",
+            "content": "<p>Anyone under 21, pregnant or nursing individuals, people on medications that may interact with cannabinoids, or anyone with a sensitivity to THC. When in doubt, consult a doctor before use.</p>",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_xhptxz",
+        "collapsible_row_FNbXRR",
+        "collapsible_row_9jdAxn"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "section_label": "",
+        "heading": "Safety & Legality",
+        "heading_size": "h2",
+        "subheading": "",
+        "btn_enable": false,
+        "btn_txt": "",
+        "btn_url": "",
+        "btn_style": "solid",
+        "btn_color_scheme": "default",
+        "content_alignment": "left",
+        "content_width": "standard",
+        "column_layout": "1",
+        "accordion_title_font": "body",
+        "accordion_title_size": "std",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top": 20,
+        "padding_bottom": 10,
+        "top_border": false,
+        "bottom_border": true,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "collapsible_content_zMegEN": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_pKHRcM": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "Will it ship to my state?",
+            "content": "<p>We ship to 44 states. We don't ship to AK, HI, ID, IA, ND, OH</p>",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        },
+        "collapsible_row_Rp9BWy": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "How long does a pod last?",
+            "content": "<p>The JAX Elixir holds 50 shots per pod. How long that lasts depends on how many shots per a drink, whether you share it and how often you use it.</p>",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        },
+        "collapsible_row_AqWHqM": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "Are the pods refillable?",
+            "content": "<p>Pods are designed to be interchangeable across the JAX device. Refill pods will be available for purchase separately.</p>",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        },
+        "collapsible_row_ajqcNb": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "Can I use JAX in public or at a bar?",
+            "content": "<p>JAX is discreet and portable by design. It's also TSA compliant.</p>",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_pKHRcM",
+        "collapsible_row_Rp9BWy",
+        "collapsible_row_AqWHqM",
+        "collapsible_row_ajqcNb"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "section_label": "",
+        "heading": "Product & Ordering",
+        "heading_size": "h2",
+        "subheading": "",
+        "btn_enable": false,
+        "btn_txt": "",
+        "btn_url": "",
+        "btn_style": "solid",
+        "btn_color_scheme": "default",
+        "content_alignment": "left",
+        "content_width": "standard",
+        "column_layout": "1",
+        "accordion_title_font": "body",
+        "accordion_title_size": "std",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top": 20,
+        "padding_bottom": 80,
+        "top_border": false,
+        "bottom_border": true,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_3jwT93",
+    "collapsible_content",
+    "collapsible_content_EmFg4r",
+    "collapsible_content_G4NH3L",
+    "collapsible_content_zMegEN"
+  ]
+}

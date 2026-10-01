@@ -1,0 +1,220 @@
+.section-countdown .section-countdown--content, 
+.section-countdown .section-footer {
+    position: relative;
+    z-index: 1;
+}
+
+.section-countdown-hoc:has(.ct-expired) {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+
+.section-countdown .section-header-paragraph p:last-child {
+  margin-bottom: 0;
+}
+
+.countdown-timer--font-heading {
+  font-family: var(--font-heading-family);
+  font-style: var(--font-heading-style);
+  font-weight: var(--font-heading-weight);
+}
+
+.countdown-timer--font-navigation {
+  font-family: var(--font-accent-family);
+  font-style: var(--font-accent-style);
+  font-weight: var(--font-accent-weight);
+}
+
+.countdown-section--bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.countdown-section--bg-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.countdown-timer--digits {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: center;
+  line-height: 1.0;
+}
+
+.align-left .countdown-timer--digits, .align--left .countdown-timer--digits {
+  justify-content: flex-start;
+}
+
+.align-right .countdown-timer--digits, .align--right .countdown-timer--digits {
+  justify-content: flex-end;
+}
+
+.countdown-timer .digit-label {
+  display: none;
+}
+
+.countdown-timer.countdown-timer--digit-labels .digit-label {
+  display: block;
+  padding-top: 0.8rem;
+}
+
+.align-right .countdown-timer--digits .digit-label, 
+.align--right .countdown-timer--digits .digit-label {
+  text-align: center;
+}
+
+.countdown-timer--digits .value {
+  display: block;
+  min-width: 2ch;
+}
+
+.countdown-timer--digits .digit-colon {
+  display: block;
+  min-width: 1ch;
+  text-align: center !important;
+}
+
+.countdown-timer--digits .countdown-seconds .value {
+  text-align: left;
+}
+
+.section-countdown .countdown-timer-expired-message, 
+.section-countdown .countdown-timer-expired-message--button {
+  display: none;
+}
+
+.section-countdown:has(.ct-expired) .countdown-timer-expired-message, 
+.section-countdown:has(.ct-expired) .countdown-timer-expired-message--button {
+  display: block;
+}
+
+.section-countdown:has(.ct-expired) .section-header-paragraph, 
+.section-countdown:has(.ct-expired) .button-pre-expiry {
+  display: none;
+}
+
+.section-countdown .countdown-timer:not(.countdown-timer--hoc.ct-expired) {
+  padding-top: 2rem;
+}
+
+@media only screen and (max-width: 749px) {
+    .countdown-layout-mobile--horizontal {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(1, 1fr);
+      column-gap: 2rem;
+    }
+    .countdown-layout-mobile--horizontal.align--left .countdown-timer--digits {
+      justify-content: flex-end;
+    }
+    .countdown-layout-mobile--horizontal .countdown-timer {
+      padding-top: 0 !important;
+    }
+    .countdown-layout-mobile--horizontal .countdown-timer .digit-label {
+      text-align: center;
+    }
+    .countdown-layout-mobile--horizontal:has(.countdown-timer--hoc.ct-expired) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    .countdown-layout-desktop--horizontal {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(1, 1fr);
+      column-gap: 2rem;
+    }
+    .countdown-layout-desktop--horizontal.align--left .countdown-timer--digits {
+      justify-content: flex-end;
+    }
+    .countdown-layout-desktop--horizontal .countdown-timer {
+      padding-top: 0 !important;
+    }
+    .countdown-layout-desktop--horizontal .countdown-timer .digit-label {
+      text-align: center;
+    }
+    .countdown-layout-desktop--horizontal:has(.countdown-timer--hoc.ct-expired) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.section-countdown .countdown-timer--hoc.ct-expired .countdown-timer--digits, 
+.product__countdown_block .countdown-timer--hoc.ct-expired .countdown-timer--digits {
+  visibility: hidden;
+  height: 0;
+  font-size: 0;
+}
+
+.section-countdown:has(.ct-expired) .section-footer:not(:has(.countdown-timer-expired-message--button)) {
+  margin-top: 0 !important;
+}
+
+.product__countdown_block.align-center .countdown-timer--digits {
+  justify-content: center;
+}
+
+.product__countdown_block .countdown--complete-text {
+  font-family: var(--font-body-family);
+  font-style: var(--font-body-style);
+  font-weight: var(--font-body-weight);
+}
+
+.pdp-countdown-heading-font--heading {
+  font-family: var(--font-heading-family);
+  font-style: var(--font-heading-style);
+  font-weight: var(--font-heading-weight);  
+}
+
+.product__countdown_block .countdown--complete-text p:last-child {
+  margin-bottom: 0;
+}
+
+.pdp-countdown-layout--horizontal {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+}
+
+.pdp-countdown-layout--horizontal .product__countdown_block_heading {
+  text-align: left;
+}
+
+.pdp-countdown-layout--horizontal .countdown--complete-text {
+  width: 100%;
+}
+
+.pdp-countdown-layout--horizontal .product__countdown_block_heading {
+  max-width: 50%;
+}
+
+.product__countdown_block .countdown--complete-text {
+  display: none;
+}
+
+.product__countdown_block:has(.ct-expired) .countdown--complete-text, 
+.product__countdown_block .countdown--active-text {
+  display: block;
+}
+
+.product__countdown_block.pdp-countdown-layout--stacked:not(.ct-expired) .product__countdown_block_heading {
+  margin-bottom: 1rem;
+}
+
+.product__countdown_block:has(.ct-expired) .countdown--active-text {
+  display: none;
+}
+
+.pdp-countdown-hboc:has(.ct-expired) {
+  display: none;
+  margin-bottom: 0 !important;
+}

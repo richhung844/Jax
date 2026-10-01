@@ -1,0 +1,393 @@
+{% doc %}
+  @prompt
+    Create a customizable Shopify Featured Product section that visually matches the clean product-card style used in my existing Featured Collection section.
+    
+    LAYOUT:
+    Use a vertically stacked product card layout:
+    
+    1. Product image at the top
+    2. Product title
+    3. Dynamic product price
+    4. Editable product description
+    5. Optional "Learn More" link
+    6. Variant selector, when the product has variants
+    7. Quantity selector (optional)
+    8. Full-width Add to Bag button
+    9. Optional icon/benefit row directly below the Add to Bag button
+    
+    The product image should ALWAYS appear above the product information on both desktop and mobile. Do not use a side-by-side image/content layout.
+    
+    FEATURED PRODUCT SETTINGS:
+    - Product picker
+    - Custom section heading
+    - Optional section subheading
+    - Show/hide product title
+    - Show/hide price
+    - Show/hide description
+    - Show/hide Learn More link
+    - Show/hide variant selector
+    - Show/hide quantity selector
+    - Show/hide Add to Bag button
+    - Custom Add to Bag button text
+    - Product image size
+    - Image aspect ratio
+    - Image fit: contain or cover
+    - Maximum content/card width
+    - Section background color
+    - Card background color
+    - Text color
+    - Button background color
+    - Button text color
+    - Border color
+    - Border radius
+    - Section padding
+    - Card padding
+    - Spacing between elements
+    
+    PRODUCT CARD STYLE:
+    Match the styling and proportions of a Shopify Featured Collection product card rather than a traditional Featured Product section.
+    
+    Keep the design clean and minimal with:
+    - Product image prominently displayed at the top
+    - Product information left aligned
+    - Consistent spacing
+    - Full-width Add to Bag button
+    - Responsive sizing
+    - No unnecessary borders, shadows, or decorative elements
+    
+    ICON / BENEFIT ROW:
+    Create an optional customizable icon row underneath the Add to Bag button.
+    
+    Allow the merchant to add up to 4 icon blocks.
+    
+    Each icon block should have:
+    - Image/icon picker
+    - Optional heading
+    - Optional short text
+    - Optional link
+    - Adjustable icon size
+    
+    Add settings for:
+    - Number of icons per row
+    - Icon alignment
+    - Text alignment
+    - Gap between icons
+    - Top spacing above icon row
+    - Icon color when applicable
+    - Heading color
+    - Text color
+    
+    On desktop, display the icons horizontally in a single row when space allows.
+    
+    On mobile, allow the icons to either remain in a row or stack/grid responsively.
+    
+    FUNCTIONALITY:
+    - Use the selected Shopify product's actual product data
+    - Price must update when a different variant is selected
+    - Variant buttons should update the selected variant correctly
+    - Add to Bag must add the currently selected variant
+    - Disable unavailable/sold-out variants
+    - Update button state for sold-out products
+    - Keep all functionality compatible with the Shopify theme cart/cart drawer
+    - Do not hard-code product information
+    
+    MOBILE:
+    Maintain the same hierarchy:
+    Product image → product information → Add to Bag → icons.
+    
+    Make all spacing, image sizing, typography, and icon layouts responsive.
+    
+    The section should be fully customizable through the Shopify Theme Editor without requiring code changes., Move the product title to the top left of the product card.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+{% assign featured_product = block.settings.product %}
+{% style %}
+  .ai-featured-{{ ai_gen_id }} { display:block; width:100%; }
+  .ai-featured-{{ ai_gen_id }}__inner { width:{{ block.settings.desktop_width_percent }}%; max-width:100%; margin:0 auto; padding:{{ block.settings.section_padding }}px 20px; background:{{ block.settings.section_bg }}; color:{{ block.settings.text_color }}; box-sizing:border-box; }
+  .ai-featured-{{ ai_gen_id }}__heading { text-align:center; margin:0 0 8px; }
+  .ai-featured-{{ ai_gen_id }}__subheading { text-align:center; margin:0 0 24px; }
+  .ai-featured-{{ ai_gen_id }}__card { position:relative; max-width:{{ block.settings.card_width }}px; padding:{{ block.settings.card_padding }}px; margin:0 auto; background:{{ block.settings.card_bg }}; border:1px solid {{ block.settings.border_color }}; border-radius:{{ block.settings.border_radius }}px; box-sizing:border-box; }
+  .ai-featured-{{ ai_gen_id }}__media { width:{{ block.settings.image_size }}%; max-width:100%; margin:0 auto; aspect-ratio:{{ block.settings.image_ratio }}; overflow:hidden; display:flex; align-items:center; justify-content:center; }
+  .ai-featured-{{ ai_gen_id }}__media img { width:100%; height:100%; object-fit:{{ block.settings.image_fit }}; display:block; }
+  .ai-featured-{{ ai_gen_id }}__placeholder { width:100%; height:100%; display:flex; align-items:center; justify-content:center; background:#f3f3f3; position:relative; }
+  .ai-featured-{{ ai_gen_id }}__placeholder svg { width:100%; height:100%; }
+  .ai-featured-{{ ai_gen_id }}__empty { position:absolute; bottom:12px; font-size:13px; color:#555; }
+  .ai-featured-{{ ai_gen_id }}__info { display:flex; flex-direction:column; gap:{{ block.settings.element_spacing }}px; margin-top:{{ block.settings.element_spacing }}px; text-align:left; }
+  .ai-featured-{{ ai_gen_id }}__title,.ai-featured-{{ ai_gen_id }}__price { margin:0; }
+  .ai-featured-{{ ai_gen_id }}__title { position:absolute; top:{{ block.settings.card_padding }}px; left:{{ block.settings.card_padding }}px; z-index:1; text-align:left; }
+  .ai-featured-{{ ai_gen_id }}__description p { margin:0; }
+  .ai-featured-{{ ai_gen_id }}__learn { color:inherit; text-underline-offset:3px; width:max-content; }
+  .ai-featured-{{ ai_gen_id }}__select,.ai-featured-{{ ai_gen_id }}__quantity { min-height:44px; padding:10px 12px; border:1px solid {{ block.settings.border_color }}; border-radius:{{ block.settings.border_radius }}px; color:inherit; background:{{ block.settings.card_bg }}; font:inherit; }
+  .ai-featured-{{ ai_gen_id }}__quantity { width:88px; }
+  .ai-featured-{{ ai_gen_id }}__submit { width:100%; min-height:48px; padding:12px 18px; border:0; border-radius:{{ block.settings.border_radius }}px; background:{{ block.settings.button_bg }}; color:{{ block.settings.button_text }}; font:inherit; cursor:pointer; }
+  .ai-featured-{{ ai_gen_id }}__submit:disabled { opacity:.55; cursor:not-allowed; }
+  .ai-featured-{{ ai_gen_id }}__benefits { display:grid; grid-template-columns:repeat({{ block.settings.icons_per_row }},minmax(0,1fr)); gap:{{ block.settings.icon_gap }}px; margin-top:{{ block.settings.icon_top_spacing }}px; }
+  .ai-featured-{{ ai_gen_id }}__benefit { text-align:{{ block.settings.icon_text_alignment }}; color:{{ block.settings.benefit_text_color }}; }
+  .ai-featured-{{ ai_gen_id }}__benefit a { color:inherit; text-decoration:none; }
+  .ai-featured-{{ ai_gen_id }}__icon { height:{{ block.settings.icon_size }}px; width:{{ block.settings.icon_size }}px; object-fit:contain; display:block; margin:0 auto 8px; }
+  .ai-featured-{{ ai_gen_id }}__benefit-heading { color:{{ block.settings.benefit_heading_color }}; font-weight:600; margin:0 0 4px; }
+  .ai-featured-{{ ai_gen_id }}__benefit-copy { margin:0; }
+  .ai-featured-{{ ai_gen_id }}__status { min-height:1em; }
+  @media(max-width:749px) { .ai-featured-{{ ai_gen_id }}__inner { width:100%; padding:{{ block.settings.section_padding | times: 0.7 }}px 16px; } .ai-featured-{{ ai_gen_id }}__card { padding:{{ block.settings.card_padding | times: 0.75 }}px; } .ai-featured-{{ ai_gen_id }}__title { top:{{ block.settings.card_padding | times: 0.75 }}px; left:{{ block.settings.card_padding | times: 0.75 }}px; } .ai-featured-{{ ai_gen_id }}__benefits--stack { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+{% endstyle %}
+<featured-product-{{ ai_gen_id }} class="ai-featured-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-featured-{{ ai_gen_id }}__inner">
+    {% if block.settings.section_heading != blank %}<h2 class="ai-featured-{{ ai_gen_id }}__heading">{{ block.settings.section_heading | escape }}</h2>{% endif %}
+    {% if block.settings.section_subheading != blank %}<div class="ai-featured-{{ ai_gen_id }}__subheading">{{ block.settings.section_subheading | escape }}</div>{% endif %}
+    {% if featured_product != blank %}
+      <div class="ai-featured-{{ ai_gen_id }}__card">
+        {% if block.settings.show_title %}<h3 class="ai-featured-{{ ai_gen_id }}__title">{{ featured_product.title | escape }}</h3>{% endif %}
+        <div class="ai-featured-{{ ai_gen_id }}__media">
+          {% if featured_product.featured_image %}<img src="{{ featured_product.featured_image | image_url: width: 1400 }}" alt="{{ featured_product.featured_image.alt | default: featured_product.title | escape }}" width="{{ featured_product.featured_image.width }}" height="{{ featured_product.featured_image.height }}" loading="lazy">{% else %}<div class="ai-featured-{{ ai_gen_id }}__placeholder">{{ 'product-apparel-1' | placeholder_svg_tag }}<span class="ai-featured-{{ ai_gen_id }}__empty">Choose a product image</span></div>{% endif %}
+        </div>
+        <form class="ai-featured-{{ ai_gen_id }}__info" data-product-form>
+          <input type="hidden" name="id" value="{{ featured_product.selected_or_first_available_variant.id }}" data-variant-id>
+          {% if block.settings.show_price %}<div class="ai-featured-{{ ai_gen_id }}__price" data-price>{{ featured_product.selected_or_first_available_variant.price | money }}</div>{% endif %}
+          {% if block.settings.show_description %}<div class="ai-featured-{{ ai_gen_id }}__description">{% if block.settings.custom_description != blank %}{{ block.settings.custom_description }}{% else %}{{ featured_product.description }}{% endif %}</div>{% endif %}
+          {% if block.settings.show_learn_more %}<a class="ai-featured-{{ ai_gen_id }}__learn" href="{{ featured_product.url }}">{{ block.settings.learn_label | escape }}</a>{% endif %}
+          {% if block.settings.show_variants and featured_product.variants.size > 1 %}<label for="ai-variant-{{ ai_gen_id }}">Choose an option</label><select id="ai-variant-{{ ai_gen_id }}" class="ai-featured-{{ ai_gen_id }}__select" data-variant-select aria-label="Choose a product variant">{% for variant in featured_product.variants %}<option value="{{ variant.id }}" data-price="{{ variant.price | money | escape }}" data-available="{{ variant.available }}" {% if variant.id == featured_product.selected_or_first_available_variant.id %}selected{% endif %} {% unless variant.available %}disabled{% endunless %}>{{ variant.title | escape }}{% unless variant.available %} — Sold out{% endunless %}</option>{% endfor %}</select>{% endif %}
+          {% if block.settings.show_quantity %}<label for="ai-quantity-{{ ai_gen_id }}">Quantity</label><input id="ai-quantity-{{ ai_gen_id }}" class="ai-featured-{{ ai_gen_id }}__quantity" type="number" name="quantity" min="1" value="1">{% endif %}
+          {% if block.settings.show_button %}<button class="ai-featured-{{ ai_gen_id }}__submit" type="submit" data-submit {% unless featured_product.selected_or_first_available_variant.available %}disabled{% endunless %}>{% if featured_product.available %}{{ block.settings.button_label | escape }}{% else %}Sold out{% endif %}</button>{% endif %}
+          <div class="ai-featured-{{ ai_gen_id }}__status" data-status aria-live="polite"></div>
+        </form>
+        {% if block.settings.show_benefits %}<div class="ai-featured-{{ ai_gen_id }}__benefits {% if block.settings.mobile_icon_layout == 'stack' %}ai-featured-{{ ai_gen_id }}__benefits--stack{% endif %}" style="text-align:{{ block.settings.icon_alignment }}">{% for i in (1..4) %}{% assign image_key = 'benefit_' | append: i | append: '_image' %}{% assign head_key = 'benefit_' | append: i | append: '_heading' %}{% assign copy_key = 'benefit_' | append: i | append: '_text' %}{% assign link_key = 'benefit_' | append: i | append: '_link' %}{% assign benefit_image = block.settings[image_key] %}{% assign benefit_heading = block.settings[head_key] %}{% assign benefit_text = block.settings[copy_key] %}{% assign benefit_link = block.settings[link_key] %}{% if benefit_image != blank or benefit_heading != blank or benefit_text != blank %}<div class="ai-featured-{{ ai_gen_id }}__benefit">{% if benefit_link != blank %}<a href="{{ benefit_link }}">{% endif %}{% if benefit_image %}<img class="ai-featured-{{ ai_gen_id }}__icon" src="{{ benefit_image | image_url: width: 200 }}" alt="" loading="lazy">{% endif %}{% if benefit_heading != blank %}<p class="ai-featured-{{ ai_gen_id }}__benefit-heading">{{ benefit_heading | escape }}</p>{% endif %}{% if benefit_text != blank %}<p class="ai-featured-{{ ai_gen_id }}__benefit-copy">{{ benefit_text | escape }}</p>{% endif %}{% if benefit_link != blank %}</a>{% endif %}</div>{% endif %}{% endfor %}</div>{% endif %}
+      </div>
+    {% else %}<p>Select a product in the block settings.</p>{% endif %}
+  </div>
+</featured-product-{{ ai_gen_id }}>
+<script>
+(function () {
+  const tag = 'featured-product-{{ ai_gen_id }}';
+
+  if (customElements.get(tag)) return;
+
+  class FeaturedProduct extends HTMLElement {
+    connectedCallback() {
+      this.form = this.querySelector('[data-product-form]');
+      if (!this.form) return;
+
+      this.select = this.querySelector('[data-variant-select]');
+      this.idInput = this.querySelector('[data-variant-id]');
+      this.price = this.querySelector('[data-price]');
+      this.button = this.querySelector('[data-submit]');
+      this.status = this.querySelector('[data-status]');
+
+      if (this.select) {
+        this.select.addEventListener('change', () => {
+          this.changeVariant();
+        });
+      }
+
+      this.form.addEventListener('submit', (event) => {
+        this.addToCart(event);
+      });
+    }
+
+    changeVariant() {
+      const option = this.select.selectedOptions[0];
+
+      this.idInput.value = option.value;
+
+      if (this.price) {
+        this.price.textContent = option.dataset.price;
+      }
+
+      if (this.button) {
+        this.button.disabled =
+          option.dataset.available !== 'true';
+
+        this.button.textContent =
+          this.button.disabled
+            ? 'Sold out'
+            : {{ block.settings.button_label | json }};
+      }
+
+      if (this.status) {
+        this.status.textContent = '';
+      }
+    }
+
+    async addToCart(event) {
+      event.preventDefault();
+
+      if (!this.button || this.button.disabled) return;
+
+      this.button.disabled = true;
+
+      if (this.status) {
+        this.status.textContent = 'Adding…';
+      }
+
+      try {
+        const root =
+          window.Shopify &&
+          Shopify.routes &&
+          Shopify.routes.root
+            ? Shopify.routes.root
+            : '/';
+
+        const cartDrawer =
+          document.querySelector('cart-drawer');
+
+        /*
+         * Use the existing product form so the selected
+         * variant and quantity are preserved.
+         */
+        const formData = new FormData(this.form);
+
+        /*
+         * Request the exact sections Luxe's native
+         * cart drawer needs.
+         */
+        if (
+          cartDrawer &&
+          typeof cartDrawer.getSectionsToRender === 'function'
+        ) {
+          const sections = cartDrawer
+            .getSectionsToRender()
+            .map((section) => section.id);
+
+          formData.append(
+            'sections',
+            sections.join(',')
+          );
+
+          formData.append(
+            'sections_url',
+            window.location.pathname
+          );
+        }
+
+        const response = await fetch(
+          root + 'cart/add.js',
+          {
+            method: 'POST',
+            headers: {
+              'Accept': 'application/json'
+            },
+            body: formData
+          }
+        );
+
+        const result = await response.json();
+
+        if (!response.ok) {
+          throw new Error(
+            result.description ||
+            result.message ||
+            'Unable to add this item.'
+          );
+        }
+
+        /*
+         * Update and open Luxe's native cart drawer.
+         */
+        if (
+          cartDrawer &&
+          typeof cartDrawer.renderContents === 'function' &&
+          result.sections
+        ) {
+          cartDrawer.renderContents(result);
+
+          /*
+           * Remove the empty-cart state so the
+           * newly added product is visible.
+           */
+          if (cartDrawer.classList.contains('is-empty')) {
+            cartDrawer.classList.remove('is-empty');
+          }
+        }
+
+        if (this.status) {
+          this.status.textContent = 'Added to bag';
+        }
+
+      } catch (error) {
+        console.error(
+          'Featured Product add to cart error:',
+          error
+        );
+
+        if (this.status) {
+          this.status.textContent =
+            error.message ||
+            'Unable to add this item.';
+        }
+
+      } finally {
+        if (this.button) {
+          const option =
+            this.select
+              ? this.select.selectedOptions[0]
+              : null;
+
+          this.button.disabled =
+            option
+              ? option.dataset.available !== 'true'
+              : false;
+
+          if (!this.button.disabled) {
+            this.button.textContent =
+              {{ block.settings.button_label | json }};
+          }
+        }
+      }
+    }
+  }
+
+  customElements.define(tag, FeaturedProduct);
+})();
+</script>
+{% schema %}
+{
+  "name":"Featured product card",
+  "settings":[
+    {"type":"product","id":"product","label":"Product"},
+    {"type":"text","id":"section_heading","label":"Section heading","default":"Featured product"},
+    {"type":"text","id":"section_subheading","label":"Section subheading"},
+    {"type":"checkbox","id":"show_title","label":"Show product title","default":true},
+    {"type":"checkbox","id":"show_price","label":"Show price","default":true},
+    {"type":"checkbox","id":"show_description","label":"Show description","default":true},
+    {"type":"richtext","id":"custom_description","label":"Custom description"},
+    {"type":"checkbox","id":"show_learn_more","label":"Show Learn More link","default":false},
+    {"type":"text","id":"learn_label","label":"Learn More text","default":"Learn more"},
+    {"type":"checkbox","id":"show_variants","label":"Show variant selector","default":true},
+    {"type":"checkbox","id":"show_quantity","label":"Show quantity selector","default":false},
+    {"type":"checkbox","id":"show_button","label":"Show Add to Bag button","default":true},
+    {"type":"text","id":"button_label","label":"Button text","default":"Add to Bag"},
+    {"type":"range","id":"desktop_width_percent","label":"Desktop width","min":50,"max":100,"step":5,"unit":"%","default":100},
+    {"type":"range","id":"card_width","label":"Maximum card width","min":300,"max":900,"step":50,"unit":"px","default":600},
+    {"type":"range","id":"image_size","label":"Image width","min":50,"max":100,"step":5,"unit":"%","default":100},
+    {"type":"select","id":"image_ratio","label":"Image aspect ratio","options":[{"value":"1 / 1","label":"Square"},{"value":"4 / 5","label":"Portrait"},{"value":"3 / 2","label":"Landscape"},{"value":"auto","label":"Natural"}],"default":"1 / 1"},
+    {"type":"select","id":"image_fit","label":"Image fit","options":[{"value":"contain","label":"Contain"},{"value":"cover","label":"Cover"}],"default":"contain"},
+    {"type":"color","id":"section_bg","label":"Section background","default":"#FFFFFF"},
+    {"type":"color","id":"card_bg","label":"Card background","default":"#FFFFFF"},
+    {"type":"color","id":"text_color","label":"Text color","default":"#000000"},
+    {"type":"color","id":"button_bg","label":"Button background","default":"#000000"},
+    {"type":"color","id":"button_text","label":"Button text color","default":"#FFFFFF"},
+    {"type":"color","id":"border_color","label":"Border color","default":"#DDDDDD"},
+    {"type":"range","id":"border_radius","label":"Border radius","min":0,"max":30,"step":2,"unit":"px","default":0},
+    {"type":"range","id":"section_padding","label":"Section padding","min":0,"max":80,"step":5,"unit":"px","default":30},
+    {"type":"range","id":"card_padding","label":"Card padding","min":0,"max":50,"step":5,"unit":"px","default":10},
+    {"type":"range","id":"element_spacing","label":"Element spacing","min":4,"max":32,"step":2,"unit":"px","default":12},
+    {"type":"header","content":"Benefit icons"},
+    {"type":"checkbox","id":"show_benefits","label":"Show benefit row","default":false},
+    {"type":"select","id":"icons_per_row","label":"Icons per row","options":[{"value":"1","label":"1"},{"value":"2","label":"2"},{"value":"3","label":"3"},{"value":"4","label":"4"}],"default":"4"},
+    {"type":"select","id":"mobile_icon_layout","label":"Mobile layout","options":[{"value":"row","label":"Keep row"},{"value":"stack","label":"2-column grid"}],"default":"stack"},
+    {"type":"select","id":"icon_alignment","label":"Icon alignment","options":[{"value":"left","label":"Left"},{"value":"center","label":"Center"},{"value":"right","label":"Right"}],"default":"center"},
+    {"type":"select","id":"icon_text_alignment","label":"Text alignment","options":[{"value":"left","label":"Left"},{"value":"center","label":"Center"},{"value":"right","label":"Right"}],"default":"center"},
+    {"type":"range","id":"icon_gap","label":"Icon gap","min":0,"max":40,"step":4,"unit":"px","default":16},
+    {"type":"range","id":"icon_top_spacing","label":"Top spacing","min":0,"max":40,"step":4,"unit":"px","default":20},
+    {"type":"range","id":"icon_size","label":"Icon size","min":16,"max":64,"step":4,"unit":"px","default":32},
+    {"type":"color","id":"benefit_heading_color","label":"Heading color","default":"#000000"},
+    {"type":"color","id":"benefit_text_color","label":"Benefit text color","default":"#444444"},
+    {"type":"image_picker","id":"benefit_1_image","label":"Icon 1 image"},{"type":"text","id":"benefit_1_heading","label":"Icon 1 heading"},{"type":"text","id":"benefit_1_text","label":"Icon 1 text"},{"type":"url","id":"benefit_1_link","label":"Icon 1 link"},
+    {"type":"image_picker","id":"benefit_2_image","label":"Icon 2 image"},{"type":"text","id":"benefit_2_heading","label":"Icon 2 heading"},{"type":"text","id":"benefit_2_text","label":"Icon 2 text"},{"type":"url","id":"benefit_2_link","label":"Icon 2 link"},
+    {"type":"image_picker","id":"benefit_3_image","label":"Icon 3 image"},{"type":"text","id":"benefit_3_heading","label":"Icon 3 heading"},{"type":"text","id":"benefit_3_text","label":"Icon 3 text"},{"type":"url","id":"benefit_3_link","label":"Icon 3 link"},
+    {"type":"image_picker","id":"benefit_4_image","label":"Icon 4 image"},{"type":"text","id":"benefit_4_heading","label":"Icon 4 heading"},{"type":"text","id":"benefit_4_text","label":"Icon 4 text"},{"type":"url","id":"benefit_4_link","label":"Icon 4 link"}
+  ],
+  "presets":[{"name":"Featured product card"}],
+  "tag":null,
+  "class":"featured-product-card"
+}
+{% endschema %}
